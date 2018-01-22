@@ -2,9 +2,13 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <link href="stilen.css" type="text/css" rel="stylesheet">
     <title>Side 3</title>
     <script src="script1.js"></script>
+    <script src="script2.js"></script>
+    <script src="http://maps.google.com/maps/api/js?sensor=false"
+          type="text/javascript"></script>
   </head>
   <body>
     <header> <h1 id="hBilde1"> Side 3 </h1> </header>
@@ -17,5 +21,20 @@
         </ul>
       </nav>
     </div>
+    <h3>HotSpots</h3>
+    <div class="dropdown">
+      <button class="dropbtn">Utesteder</button>
+       <div class="dropdown-content">
+         <a href="#ricks" input id="ricksKnapp" type="button" value="clickme" onclick="ricksKlikk()">Ricks</a>
+         <a href="#donPippo" input id="pippoKnapp" type="button" value="clickme" onclick="pippoKlikk()">Don Pippo</a>
+         <a href="#garage" input id="garageKnapp" type="button" value="clickme" onclick="garageKlikk()">Garage</a>
+       </div>
+     </div>
+     <div id="pageContent"><p>neger</p>
+     </div>
+    <div id="map"></div>
+      <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5xTJ2d6PKux3SSgIu8yrl5oNpu_DkIm8&callback=initMap">
+      </script>
   </body>
 </html>

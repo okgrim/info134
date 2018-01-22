@@ -3,7 +3,7 @@ body {
   font-family: helvetica;
 }
 p {
-  font-size: 50px;
+  font-size: 25px;
   text-align: center;
 }
 h1 {
@@ -116,4 +116,30 @@ li a:hover{
 
 .dropdown:hover .dropbtn {
     background-color: #474747;
+}
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0
+
+}
+
+#map {
+  margin-left:auto;
+  margin-right:auto;
+  width: 80%;
+  height: 400px;
+  background-color: grey;
+  position: fixed;
+  text-align: center;
+}
+
+#pageContent {
+  text-align: center;
+}
+
+#tekst1 {
+  color: white;
+  text-align: center;
+  font-size: 1px;
 }
