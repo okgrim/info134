@@ -1,0 +1,53 @@
+body {
+  background;
+}
+p {
+  font-size: 50px;
+  text-align: center;
+}
+h1 {
+  text-align: center;
+  background-size: 500px;
+}
+
+#hBilde1 {
+  font-family: monospace;
+  background-color: white;
+  background-image: url("Bergen Bryggen.jpg");
+  border-radius: 50px;
+  margin: 5px;
+  color:  #ffe6e6;
+  font-size: 50px;
+   text-shadow: 2px 2px #ff0000;
+  padding: 75px;
+  background-size:cover;
+  background-position: center;
+  display:;
+}
+
+header{
+    text-align: center;
+}
+
+#mainNav {
+  display:inline-block;
+  border: black 3px double;
+  margin: 5px;
+  padding-right: 10px;
+
+}
+
+
+#knappleif {
+  text-align: center;
+  float: center;
+}
+
+#knappur {
+  text-align: center;
+}
+
+#mittNavn {
+  font-style: italic;
+  color: coral;
+}
