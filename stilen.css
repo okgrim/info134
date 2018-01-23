@@ -1,8 +1,10 @@
 body {
-  background;
+  background-color: #C0C0C0;
+  font-family: helvetica;
 }
+
 p {
-  font-size: 50px;
+  font-size: 25px;
   text-align: center;
 }
 h1 {
@@ -11,14 +13,14 @@ h1 {
 }
 
 #hBilde1 {
-  font-family: monospace;
+  font-family: helvetica;
   background-color: white;
-  background-image: url("Bergen Bryggen.jpg");
-  border-radius: 50px;
-  margin: 5px;
+  background-image: url("regnet.jpg");
+  border-radius:;
+  margin: 0px;
   color:  #ffe6e6;
   font-size: 50px;
-   text-shadow: 2px 2px #ff0000;
+  text-shadow: 2px 2px #ff0000;
   padding: 75px;
   background-size:cover;
   background-position: center;
@@ -31,10 +33,8 @@ header{
 
 #mainNav {
   display:inline-block;
-  border: black 3px double;
-  margin: 5px;
-  padding-right: 10px;
-
+  margin: 0;
+  padding-right: 0;
 }
 
 
@@ -50,4 +50,103 @@ header{
 #mittNavn {
   font-style: italic;
   color: coral;
+}
+
+ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #474747;
+}
+
+li{
+  float: left;
+}
+
+li a{
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover{
+  background-color: #5e5e5e;
+}
+
+
+.dropbtn {
+    background-color: #474747;
+    color: white;
+    padding: 14px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    min-width: 160px
+    float: left;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #FFFFFF;
+    min-width: 240px;
+    box-shadow: 0px 16px 32px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #5e5e5e}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #474747;
+}
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0
+
+}
+
+#googlemap {
+  margin-left:auto;
+  margin-right:auto;
+  margin-bottom: 50px;
+  width: 80%;
+  height: 400px;
+  background-color: grey;
+  position: fixed;
+  text-align: center;
+}
+
+#pageContent {
+  text-align: center;
+}
+
+#tekst1 {
+  color: white;
+  text-align: center;
+  font-size: 1px;
+}
+
+#infoInnhold {
+  text-align: left;
+  image-orientation: left;
 }

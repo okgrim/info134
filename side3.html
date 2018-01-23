@@ -2,9 +2,12 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <link href="stilen.css" type="text/css" rel="stylesheet">
     <title>Side 3</title>
     <script src="script1.js"></script>
+    <script src="script2.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
   </head>
   <body>
     <header> <h1 id="hBilde1"> Side 3 </h1> </header>
@@ -17,5 +20,78 @@
         </ul>
       </nav>
     </div>
+    <div class="dropdown">
+      <button class="dropbtn">Utesteder</button>
+       <div class="dropdown-content">
+         <!-- Her inneholder linkene det nødvendige for å ha en tilhørende click+referanse til funksjon -->
+         <a href="#ricks" input id="ricksKnapp" type="button" value="clickme" onclick="ricksKlikk();myClick(0)">Ricks</a>
+         <a href="#donPippo" input id="pippoKnapp" type="button" value="clickme" onclick="pippoKlikk();myClick(1)">Don Pippo</a>
+         <a href="#garage" input id="garageKnapp" type="button" value="clickme" onclick="garageKlikk();myClick(2)">Garage</a>
+       </div>
+     </div>
+     <div id="pageContent"><p>Sydhavsprins</p>
+     </div>
+     <script type="text/javascript">
+        var markers = [];
+    function initialize() {
+
+            var mapOptions = {
+                zoom: 14,
+                center: new google.maps.LatLng(60.392636, 5.321342),
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            }
+            var map = new google.maps.Map(document.getElementById("googlemap"), mapOptions);
+
+
+            var locations = [
+                ['<div id="infoInnhold">'+
+                '<b>Ricks<b> holder til i Christies Gate 11.</br>'+
+                'Her kan du finne lettkledde tanter'+
+                'og onkler som ønsker å ta på tantene.'+
+                '<img src="ricksbilde.png">'+
+                '</div>'
+                , 60.392636, 5.321342],
+                ['<b>DonPippo</b> kan sutte tett med snopp.', 60.389680, 5.322974],
+                ['</b>Garage</b> er et sted hvor man parkerer bilen sin', 60.389586, 5.323835]
+            ];
+
+
+            var marker, i;
+            var infowindow = new google.maps.InfoWindow();
+
+
+            google.maps.event.addListener(map, 'click', function() {
+                infowindow.close();
+            });
+
+
+            for (i = 0; i < locations.length; i++) {
+                marker = new google.maps.Marker({
+                    position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+                    map: map,
+                    icon: locations[i][3]
+                });
+
+                google.maps.event.addListener(marker, 'click', (function(marker, i) {
+                    return function() {
+                        infowindow.setContent(locations[i][0]);
+                        infowindow.open(map, marker);
+                    }
+                })(marker, i));
+
+                markers.push(marker);
+            }
+
+        }
+        google.maps.event.addDomListener(window, 'load', initialize);
+
+        function myClick(id){
+            google.maps.event.trigger(markers[id], 'click');
+        }
+</script>
+  <div id="googlemap"></div>
+      <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5xTJ2d6PKux3SSgIu8yrl5oNpu_DkIm8&callback=initMap">
+      </script>
   </body>
 </html>
