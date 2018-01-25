@@ -2,7 +2,7 @@ body {
   background;
 }
 p {
-  font-size: 50px;
+  font-size: 14px;
   text-align: center;
 }
 h1 {
@@ -18,7 +18,7 @@ h1 {
   margin: 5px;
   color:  #ffe6e6;
   font-size: 50px;
-   text-shadow: 2px 2px #ff0000;
+  text-shadow: 2px 2px #ff0000;
   padding: 75px;
   background-size:cover;
   background-position: center;
@@ -50,4 +50,55 @@ header{
 #mittNavn {
   font-style: italic;
   color: coral;
+}
+
+.head{
+  text-align: center;
+  font-style: italic;
+}
+
+#stadion{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#fløyen {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 350px;
+  width: 600px;
+}
+
+#Bryggen{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 650px;
+  height: 400px;
+}
+
+#Fisketorget{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#Koengen {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 504px;
+  width: 756px;
+}
+
+#liste{
+  font-size: 14px;
+  margin-left: 45%;
+  margin-right:-55%;
+}
+
+#begynn{
+  text-align: center;
 }

@@ -4,18 +4,37 @@
     <meta charset="utf-8">
     <link href="stilen.css" type="text/css" rel="stylesheet">
     <title>Side 2</title>
-    <script src="script1.js"></script>
+    <script src="side2_script.js"></script>
   </head>
   <body>
     <header> <h1 id="hBilde1"> Side 2 </h1> </header>
+    <div style="text-align: center;">
     <div id="navigasjon">
       <nav id="mainNav">
         <ul>
           <li><a href="index.html">Home</a>
-          <li><a href="side2.html">Placeholder</a>
-          <li><a href="side3.html">Placeholder 2</a>
+          <li><a href="side2.html">Side 2</a>
+          <li><a href="side3.html">Side 3</a>
         </ul>
       </nav>
+     </div>
+   </div>
+     <div>
+        <h2 id="begynn"> I Bergen by fins det rikelig med muligheter for å nyte kultur, natur, og idrett.</h2>
+         <p><strong>Her er 5 aktiviteter man kan gjøre i Bergen:</strong></p>
+
+      <div style="text-align: center;">
+         <div class="dropdown">
+          <button class="dropbtn">Aktiviteter</button>
+            <div class="dropdown-content">
+              <a href="#stadion" type="button" onclick="brannKlikk()"> Brann Kamp </a>
+              <a href="#fløyen" type="button" onclick="fløyenKlikk()"> Fløyen </a>
+              <a href="#Bryggen" type="button" onclick="bryggenKlikk()"> Bryggen </a>
+              <a href="#Fisketorget" type="button" onclick="fisketorgetKlikk()"> Fisketorget </a>
+              <a href="#Koengen" type="button" onclick="koengenKlikk()"> Koengen </a>
+            </div>
+         </div>
+      </div>
      </div>
   </body>
 </html>
