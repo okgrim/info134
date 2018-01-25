@@ -1,53 +1,72 @@
-body {
-  background;
-}
-p {
-  font-size: 50px;
-  text-align: center;
-}
-h1 {
-  text-align: center;
-  background-size: 500px;
+html{
+  height: 100%;
 }
 
-#hBilde1 {
-  font-family: monospace;
-  background-color: white;
-  background-image: url("Bergen Bryggen.jpg");
-  border-radius: 50px;
-  margin: 5px;
-  color:  #ffe6e6;
-  font-size: 50px;
-   text-shadow: 2px 2px #ff0000;
-  padding: 75px;
-  background-size:cover;
+body{
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 300;
+  background-image: url("bergen-gågate.jpg");
+  height:100%;
+  background-attachment: fixed;
   background-position: center;
-  display:;
+  background-repeat: no-repeat;
+  background-color: #f4f5f7;
+  background-size: cover;
+  margin:0;
+  padding:0;
 }
 
-header{
-    text-align: center;
+.header{
+    background: #f0ead6;
+    margin:0;
+    padding:0;
+    position: fixed;
+    opacity: 0.9;
+    width: 100%
 }
 
-#mainNav {
-  display:inline-block;
-  border: black 3px double;
-  margin: 5px;
-  padding-right: 10px;
+.headerNav {
+  text-align:center;
+}
 
+nav ul{
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+}
+
+nav li {
+  font-size:20px;
+  list-style: none;
+  display: inline-block;
+  size: cover;
+  padding: 20px 30px;
+  cursor: pointer;
+  text-transform: uppercase;
 }
 
 
-#knappleif {
-  text-align: center;
-  float: center;
+@media only screen and (max-width: 620px){
+  body {
+    font-size: 10px;
+  }
+  nav li {
+    font-size: 12px;
+  }
 }
 
-#knappur {
-  text-align: center;
+nav ul li:hover{
+  background: #f9f4f8;
 }
 
-#mittNavn {
-  font-style: italic;
-  color: coral;
+nav a {
+  color: black;
+  display:block;
+  float: left;
+  text-decoration: none;
+}
+
+.innhold{
+  padding: 80px 30px 0px 35px;
+
 }
