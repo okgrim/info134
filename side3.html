@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <link href="stilen.css" type="text/css" rel="stylesheet">
     <title>Side 3</title>
-    <script src="script1.js"></script>
   </head>
   <body>
     <header> <h1 id="hBilde1"> Side 3 </h1> </header>
@@ -17,5 +17,20 @@
         </ul>
       </nav>
     </div>
+    <div class="dropdown">
+      <button class="dropbtn">Utesteder</button>
+       <div class="dropdown-content">
+         <!-- Her inneholder linkene det nødvendige for å ha en tilhørende click+referanse til funksjon -->
+         <a href="#ricks" input id="ricksKnapp" type="button" value="clickme" onclick="ricksKlikk();myClick(0)">Ricks</a>
+         <a href="#donPippo" input id="pippoKnapp" type="button" value="clickme" onclick="pippoKlikk();myClick(1)">Don Pippo</a>
+         <a href="#garage" input id="garageKnapp" type="button" value="clickme" onclick="garageKlikk();myClick(2)">Garage</a>
+       </div>
+     </div>
+     <div id="pageContent"><p>Sydhavsprins</p>
+     </div>
+  <div id="googlemap"></div>
+  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+  <script src="script1.js"></script>
+  <script src="script2.js"></script>
   </body>
 </html>
