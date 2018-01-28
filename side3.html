@@ -2,20 +2,38 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <link href="stilen.css" type="text/css" rel="stylesheet">
     <title>Side 3</title>
-    <script src="script1.js"></script>
   </head>
-  <body>
-    <header> <h1 id="hBilde1"> Side 3 </h1> </header>
-    <div id="navigasjon">
-      <nav id="mainNav">
-        <ul>
+  <body id="places">
+    <header class="header">
+      <nav class="headerNav">
+        <ul class="headerUl">
           <li><a href="index.html">Home</a>
-          <li><a href="side2.html">Placeholder</a>
-          <li><a href="side3.html">Placeholder 2</a>
+          <li><a href="side2.html">Activities</a>
+          <li class="dropdown"><a href="side3.html" class="dropbtn">Places</a>
+                <div class="dropdown-content">
+               <!-- Her inneholder linkene det nødvendige for å ha en tilhørende click+referanse til funksjon -->
+               <a href="#ricks" input id="ricksKnapp" type="button" value="clickme" onclick="ricksKlikk();myClick(0)">Ricks</a>
+               <a href="#donPippo" input id="pippoKnapp" type="button" value="clickme" onclick="pippoKlikk();myClick(1)">Don Pippo</a>
+               <a href="#garage" input id="garageKnapp" type="button" value="clickme" onclick="garageKlikk();myClick(2)">Garage</a>
+               <a href="#noStress" input id="stressKnapp" type="button" value="clickme" onclick="stressKlikk();myClick(3)">No Stress</a>
+               <a href="#gbiskopen" input id="biskopenKnapp" type="button" value="clickme" onclick="biskopenKlikk();myClick(4)">Biskopen</a>
+             </div>
+
         </ul>
       </nav>
-    </div>
+    </header>
+     <div id="pageContent">
+       <div class="innhold">
+         <p> Her kommer det tekst og forklaring om å  bruke dropdown.</p>
+         <p> Vær flink til å srkive masse bra da hehe ;);I)</p>
+     </div>
+   </div>
+  <div id="googlemap"></div>
+  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+  <script src="script1.js"></script>
+  <script src="script2.js"></script>
   </body>
 </html>
