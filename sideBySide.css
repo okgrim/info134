@@ -1,0 +1,41 @@
+/*Ignorer denne*/
+body{
+  background: #888;
+  font-size: 25px;
+}
+
+/* Bredden på hele skjermen (tekst + bilde) */
+#textOgBilde{
+  width: 1200px;
+}
+
+/* - Venstre "boks"
+- Dimensjonene på bredde og høyde kan man
+justere etter vår tekst og bilde. */
+.left{
+  width: 45%;
+  height: 123px;
+  float: left;
+  margin-left: 15px;
+}
+
+/* - Høyre "boks", samme gjelder her som med venstre boks. */
+.right{
+  width: 45%;
+  height: 123px;
+  float: right;
+}
+
+/*Dimensjonene på bildet jeg brukte, denne kan du ignorere.*/
+#boxing{
+  width: 400px;
+  height: 275px;
+}
+
+/*Headeren, kommer før boksene, og har ikke blitt gitt noen bredde,
+høyde, eller "float", så oppfører seg som en vanlig header.*/
+.head{
+  text-align: center;
+  font-style: italic;
+  font-size: 50px;
+}
