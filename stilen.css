@@ -102,6 +102,8 @@ nav a {
   float: left;
   margin: 150px;
   opacity: 0.9;
+  position: relative;
+  z-index: -1;
 }
 /* UNDER HER KOMMER ODIN SINE GREIER */
 
