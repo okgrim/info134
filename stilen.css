@@ -1,5 +1,6 @@
 body {
-  background;
+  background: radial-gradient(#7a91d6, #f4faff);
+  font-family: helvetica;
 }
 p {
   font-size: 14px;
@@ -11,7 +12,7 @@ h1 {
 }
 
 #hBilde1 {
-  font-family: monospace;
+  font-family: helvetica;
   background-color: white;
   background-image: url("Bergen Bryggen.jpg");
   border-radius: 50px;
@@ -30,11 +31,9 @@ header{
 }
 
 #mainNav {
-  display:inline-block;
-  border: black 3px double;
-  margin: 5px;
-  padding-right: 10px;
-
+  display: inline-block;
+  margin: 0;
+  padding: 0;
 }
 
 
@@ -52,6 +51,73 @@ header{
   color: coral;
 }
 
+ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #474747;
+}
+
+li{
+  float: left;
+}
+
+li a{
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover{
+  background-color: #5e5e5e;
+}
+
+
+.dropbtn {
+    background-color: #474747;
+    color: white;
+    padding: 14px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    min-width: 160px
+    float: left;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #FFFFFF;
+    min-width: 240px;
+    box-shadow: 0px 16px 32px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #5e5e5e}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #474747;
+}
+
 .head{
   text-align: center;
   font-style: italic;
@@ -61,6 +127,8 @@ header{
   display: block;
   margin-left: auto;
   margin-right: auto;
+  height: 240px;
+  width: 275px;
 }
 
 #fløyen {
@@ -91,12 +159,6 @@ header{
   margin-right: auto;
   height: 504px;
   width: 756px;
-}
-
-#liste{
-  font-size: 14px;
-  margin-left: 45%;
-  margin-right:-55%;
 }
 
 #begynn{
