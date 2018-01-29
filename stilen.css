@@ -1,126 +1,127 @@
-body {
-  background: radial-gradient(#7a91d6, #f4faff);
-  font-family: helvetica;
-}
-p {
-  font-size: 14px;
-  text-align: center;
-}
-h1 {
-  text-align: center;
-  background-size: 500px;
+html{
+  height: 100%;
 }
 
-#hBilde1 {
-  font-family: helvetica;
-  background-color: white;
-  background-image: url("Bergen Bryggen.jpg");
-  border-radius: 50px;
-  margin: 5px;
-  color:  #ffe6e6;
-  font-size: 50px;
-  text-shadow: 2px 2px #ff0000;
-  padding: 75px;
-  background-size:cover;
+body{
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 300;
+  background-image: url("bergen-gaagate.jpg");
+  height:100%;
+  background-attachment: fixed;
   background-position: center;
-  display:;
+  background-repeat: no-repeat;
+  background-color: #f4f5f7;
+  background-size: cover;
+  margin:0;
+  padding: 0;
 }
 
-header{
-    text-align: center;
+.header{
+    background: #f0ead6;
+    margin: 0;
+    padding:0;
+    position: fixed;
+    opacity: 0.9;
+    width: 100%
 }
 
-#mainNav {
+.headerNav {
+  text-align:center;
+}
+
+nav ul{
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+}
+
+nav li {
+  font-size:20px;
+  list-style: none;
   display: inline-block;
-  margin: 0;
-  padding: 0;
+  size: cover;
+  padding: 20px 30px;
+  cursor: pointer;
+  text-transform: uppercase;
 }
 
 
-#knappleif {
-  text-align: center;
-  float: center;
+@media only screen and (max-width: 620px){
+  body {
+    font-size: 10px;
+  }
+  nav li {
+    font-size: 12px;
+  }
 }
 
-#knappur {
-  text-align: center;
+nav ul li:hover{
+  background: #f9f4f8;
 }
 
-#mittNavn {
-  font-style: italic;
-  color: coral;
-}
 
-ul{
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #474747;
-}
-
-li{
+nav a {
+  color: black;
+  display:block;
   float: left;
-}
-
-li a{
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
   text-decoration: none;
-}
-
-li a:hover{
-  background-color: #5e5e5e;
 }
 
 
 .dropbtn {
-    background-color: #474747;
-    color: white;
-    padding: 14px;
-    font-size: 16px;
+    opacity: 0.9;
+    padding: 0px;
+    font-size: 20px;
     border: none;
     cursor: pointer;
-    min-width: 160px
-    float: left;
 }
 
 .dropdown {
     position: relative;
-    display: inline-block;
 }
 
 .dropdown-content {
     display: none;
     position: absolute;
     background-color: #FFFFFF;
-    min-width: 240px;
-    box-shadow: 0px 16px 32px 0px rgba(0,0,0,0.2);
+    min-width: 150px;
     z-index: 1;
+    margin-top: 45px;
+    border: 1px;
+    border-color: 474747;
+    border-style: solid;
 }
 
 .dropdown-content a {
     color: black;
-    padding: 12px 16px;
+    padding: 15px 15px;
     text-decoration: none;
     display: block;
 }
 
-.dropdown-content a:hover {background-color: #5e5e5e}
+.dropdown-content a:hover {
+  background-color: #f0ead6;
+  width: 100%;
+  font-size: 23px;
+  border: 1px;
+  border-color: 474747;
+  border-style: solid;
+
+}
 
 .dropdown:hover .dropdown-content {
     display: block;
 }
 
-.dropdown:hover .dropbtn {
-    background-color: #474747;
-}
-
-.head{
-  text-align: center;
-  font-style: italic;
+.innhold{
+  padding: 80px 35px 80px 35px;
+  position: relative;
+  background-color: white;
+  width: 500px;
+  float: left;
+  margin: 150px;
+  opacity: 0.9;
+  z-index: -1;
 }
 
 #stadion{
@@ -164,3 +165,26 @@ li a:hover{
 #begynn{
   text-align: center;
 }
+
+.pictureRight{
+  padding: 80px 35px 80px 35px;
+  background-image:url("bergen-fisketorget.jpg");
+  position:static;
+  background-attachment: absolute;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: white;
+  background-size: cover;
+  width: 400px;
+  height: 200px;
+  max-width: 500px;
+  max-height: 500px;
+  float: right;
+  margin-right: 150px;
+  margin-top: 200px;
+  z-index: -1;
+  box-shadow: 13px 15px #f0ead6;
+}
+
+.bildeHøyre{
+  max-height: 300px;
