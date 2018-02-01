@@ -172,7 +172,7 @@ nav a {
 /* - Venstre "boks"
 - Dimensjonene på bredde og høyde kan man
 justere etter vår tekst og bilde. */
-.left{
+/* .left{
   width: 45%;
   height: 123px;
   float: left;
@@ -180,11 +180,11 @@ justere etter vår tekst og bilde. */
 }
 
 /* - Høyre "boks", samme gjelder her som med venstre boks. */
-.right{
+/* .right{
   width: 45%;
   height: 123px;
   float: right;
-}
+}  */
 
 #boxing {
   height: 400px;
@@ -195,4 +195,65 @@ justere etter vår tekst og bilde. */
 
 p {
   text-align: left;
+}
+
+#stadion{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 440px;
+  width: 500px;
+  padding: 10px;
+  background-color: white;
+  background-blend-mode: lighten;
+  z-index: -1;
+}
+
+#fløyen {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 350px;
+  width: 600px;
+}
+
+#Bryggen{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 650px;
+  height: 400px;
+}
+
+#Fisketorget{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#Koengen {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 504px;
+  width: 756px;
+}
+
+#begynn{
+  text-align: center;
+}
+
+.flex-container > div {
+  display: flex;
+  flex: 1;
+}
+
+.venstre{
+  flex: 50%;
+}
+
+.høyre{
+  flex: 50%;
+  margin-top: 200px;
+  justify-content: center;
 }
