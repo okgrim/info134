@@ -14,10 +14,11 @@ var brannTekst =
 '</div>'+
 '</div>'+
 '<div class="høyre">'+
-'<img id="stadion" src="Brann Stadion.jpg">' +
+'<img id="stadion" src="Brann Stadion.jpg" alt="Bilde av Brann Stadion">' +
 '</div>';
 
 var fløyenTekst =
+'<div class="venstre">'+
 '<div class="innhold">'+
 '<p><h1>Tur på Fløyen</h1></p>'+
 '<p> Bergen er kjent for sine 7 fjell. Et av disse fjellene heter Fløyen, og har en høyde på 320 moh</p>'+
@@ -30,11 +31,13 @@ var fløyenTekst =
 '<p>  culpa qui officia deserunt mollit anim id est laborum. </p>'+
 '<p>Dette skyldes den vakre naturen og flotte utsikten fra toppen.</p>'+
 '</div>'+
-'<div>'+
-'<img id="fløyen" src="Fløyen.jpg">'+
+'</div>'+
+'<div class="høyre">'+
+'<img id="fløyen" src="../img/Fløyen.jpg" alt="Bilde av Fløyen">'+
 '</div>';
 
 var bryggenTekst =
+'<div class="venstre">'+
 '<div class="innhold">'+
 '<p><h1> Bryggen </h1></p>'+
 '<p> Bryggen er en av de største turistattraksjonene i Bergen.</p>'+
@@ -48,11 +51,13 @@ var bryggenTekst =
 '<p>  culpa qui officia deserunt mollit anim id est laborum. </p>'+
 '<p>Dette skyldes den vakre naturen og flotte utsikten fra toppen.</p>'+
 '</div>'+
-'<div>'+
-'<img id="Bryggen" src="Bryggen.jpg">'+
+'</div>'+
+'<div class="høyre">'+
+'<img id="Bryggen" src="../img/Bryggen.jpg" alt="Bilde av Bryggen">'+
 '</div>';
 
 var fisketorgetTekst =
+'<div class="venstre">'+
 '<div class="innhold">'+
 '<p><h1> Fisketorget </h1></p>'+
 '<p> Fisketorget i Bergen sentrum er svært kjent. Her kan man kjøpe fersk fisk og skalldyr, og spise ved vannet midt i Bergen Sentrum. </p>'+
@@ -65,11 +70,13 @@ var fisketorgetTekst =
 '<p>  culpa qui officia deserunt mollit anim id est laborum. </p>'+
 '<p>Dette skyldes den vakre naturen og flotte utsikten fra toppen.</p>'+
 '</div>'+
-'<div>'+
-'<img id="Fisketorget" src="Fisketorget.jpg">'+
+'</div>'+
+'<div class="høyre">'+
+'<img id="Fisketorget" src="../img/Fisketorget.jpg" alt="bilde av Fisketorget">'+
 '</div>';
 
 var koengenTekst =
+'<div class="venstre">'+
 '<div class="innhold">'+
 '<p><h1> Konserter på Koengen </h1></p>'+
 '<p> Koengen er en park i Bergen der mange store konserter blir arrangert.</p>'+
@@ -84,8 +91,9 @@ var koengenTekst =
 '<p>  culpa qui officia deserunt mollit anim id est laborum. </p>'+
 '<p>Dette skyldes den vakre naturen og flotte utsikten fra toppen.</p>'+
 '</div>'+
-'<div>'+
-'<img id="Koengen" src="Koengen.jpg">'+
+'</div>'+
+'<div class="høyre">'+
+'<img id="Koengen" src="../img/Koengen.jpg" alt="Bilde av Koengen">'+
 '</div>';
 
 function brannKlikk(){
