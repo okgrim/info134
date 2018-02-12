@@ -1,39 +1,50 @@
+<!-- Struktur og innhold av Odin, dropdown buttons av David -->
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-    <link href="stilen.css" type="text/css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta name="viewport" content="initial-scale=1.0, user-scalable=no"> -->
+    <link href="../css/stilen.css" type="text/css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:300" rel="stylesheet">
     <title>Side 3</title>
   </head>
   <body id="places">
-    <header class="header">
-      <nav class="headerNav">
-        <ul class="headerUl">
-          <li><a href="index.html">Home</a>
-          <li><a href="side2.html">Activities</a>
-          <li class="dropdown"><a href="side3.html" class="dropbtn">Places</a>
-                <div class="dropdown-content">
-               <!-- Her inneholder linkene det nødvendige for å ha en tilhørende click+referanse til funksjon -->
-               <a href="#ricks" input id="ricksKnapp" type="button" value="clickme" onclick="ricksKlikk();myClick(0)">Ricks</a>
-               <a href="#donPippo" input id="pippoKnapp" type="button" value="clickme" onclick="pippoKlikk();myClick(1)">Don Pippo</a>
-               <a href="#garage" input id="garageKnapp" type="button" value="clickme" onclick="garageKlikk();myClick(2)">Garage</a>
-               <a href="#noStress" input id="stressKnapp" type="button" value="clickme" onclick="stressKlikk();myClick(3)">No Stress</a>
-               <a href="#gbiskopen" input id="biskopenKnapp" type="button" value="clickme" onclick="biskopenKlikk();myClick(4)">Biskopen</a>
-             </div>
-
-        </ul>
-      </nav>
-    </header>
-     <div id="pageContent">
-       <div class="innhold">
-         <p> Her kommer det tekst og forklaring om å  bruke dropdown.</p>
-         <p> Vær flink til å srkive masse bra da hehe ;);I)</p>
-     </div>
-   </div>
-  <div id="googlemap"></div>
-  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
-  <script src="script1.js"></script>
-  <script src="script2.js"></script>
-  </body>
+    <div class="container">
+      <div class="headerBox">
+        <nav class="headerNav">
+          <ul class="headerUl">
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown"><a href="side2.html" class="dropbtn">Activities</a>
+              <ul class="dropdown-content">
+                <li><a href="#stadion" type="button" onclick="brannKlikk()"> Brann kamp </a></li>
+                <li><a href="#fløyen" type="button" onclick="fløyenKlikk()"> Fløyen </a></li>
+                <li><a href="#Bryggen" type="button" onclick="bryggenKlikk()"> Bryggen </a></li>
+                <li><a href="#Fisketorget" type="button" onclick="fisketorgetKlikk()"> Fisketorget </a></li>
+                <li><a href="#Koengen" type="button" onclick="koengenKlikk()"> Koengen </a></li>
+              </ul></li>
+            <li class="dropdown"><a href="side3.html" class="dropbtn">Places</a>
+              <ul class="dropdown-content">
+                   <!-- Her inneholder linkene det nødvendige for å ha en tilhørende click+referanse til funksjon -->
+                <li><a href="side3.html" input id="ricksKnapp" type="button" value="clickme" onclick="ricksKlikk();myClick(0)">Ricks</a></li>
+                <li><a href="side3.html" input id="pippoKnapp" type="button" value="clickme" onclick="pippoKlikk();myClick(1)">Don Pippo</a></li>
+                <li><a href="side3.html" input id="garageKnapp" type="button" value="clickme" onclick="garageKlikk();myClick(2)">Garage</a></li>
+                <li><a href="side3.html" input id="stressKnapp" type="button" value="clickme" onclick="stressKlikk();myClick(3)">No Stress</a></li>
+                <li><a href="side3.html" input id="biskopenKnapp" type="button" value="clickme" onclick="biskopenKlikk();myClick(4)">Biskopen</a></li>
+              </ul></li>
+          </ul>
+        </nav>
+      </div>
+      <div id="pageContent"> <!--kan jeg ta dette vekk-->
+        <div class="innhold">
+            <p> Her kommer det tekst og forklaring om å  bruke dropdown.</p>
+            <p> Vær flink til å srkive masse bra da hehe ;);I)</p>
+         </div>
+      </div>
+      <div id="googlemap"></div>
+        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+        <script src="../js/side3_script1.js"></script>
+        <script src="../js/side3_script2.js"></script>
+    </div>
+    </body>
 </html>
