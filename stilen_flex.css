@@ -1,0 +1,259 @@
+/* Sondre har stått for store deler av design og css*/
+html{
+  height: 100%;
+}
+
+#index{
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 300;
+  background-image: url("bergen-gaagate.jpg");
+  height:100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #f4f5f7;
+  background-size: cover;
+  margin:0;
+  padding: 0;
+}
+
+#aktiviteter{
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 300;
+  background-image: url("bergen-lovstakken.jpg");
+  height:100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #f4f5f7;
+  background-size: cover;
+  margin:0;
+  padding:0;
+}
+
+#places{
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 300;
+  background-image: url("bergen-fisketorget.jpg");
+  height:100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #f4f5f7;
+  background-size: cover;
+  margin:0;
+  padding:0;
+}
+
+.header{
+    background: #f0ead6;
+    margin:0;
+    padding:0;
+    margin-bottom: 10%;
+    position: fixed;
+    opacity: 0.9;
+    width: 100%
+}
+
+.headerNav {
+  text-align:center;
+}
+
+nav ul{
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+}
+
+nav li {
+  font-size:20px;
+  list-style: none;
+  display: inline-block;
+  size: cover;
+  padding: 20px 30px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+
+@media only screen and (max-width: 620px){
+  body {
+    font-size: 10px;
+  }
+  nav li {
+    font-size: 12px;
+  }
+}
+
+nav ul li:hover{
+  background: #f9f4f8;
+}
+
+nav a {
+  color: black;
+  display:block;
+  float: left;
+  text-decoration: none;
+}
+
+.innhold{
+  padding: 80px 35px 80px 35px;
+  background-color: white;
+  width: 500px;
+  float: left;
+  margin: 150px;
+  opacity: 0.9;
+  position: relative;
+  z-index: -1;
+}
+/* UNDER HER KOMMER ODIN SINE GREIER */
+
+#googlemap {
+  margin-left:auto;
+  margin-right:auto;
+  margin-bottom: 50px;
+  width: 80%;
+  height: 400px;
+  background-color: grey;
+  position: bottom;
+  text-align: center;
+}
+
+#pageContent {
+  text-align: center;
+}
+
+#tekst1 {
+  color: white;
+  text-align: center;
+  font-size: 1px;
+}
+
+/* Under kommer Davids drop-down navigasjon */
+.dropbtn {
+    opacity: 0.9;
+    padding: 0px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #FFFFFF;
+    min-width: 150px;
+    z-index: 1;
+    margin-top: 45px;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 15px 15px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f0ead6;
+  width: 100%;
+  font-size: 23px;
+
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Harald sine right/left greier kommer nuh */
+/* - Venstre "boks"
+- Dimensjonene på bredde og høyde kan man
+justere etter vår tekst og bilde. */
+/* .left{
+  width: 45%;
+  height: 123px;
+  float: left;
+  margin-left: 15px;
+}
+/* - Høyre "boks", samme gjelder her som med venstre boks. */
+/* .right{
+  width: 45%;
+  height: 123px;
+  float: right;
+}  */
+
+#boxing {
+  height: 400px;
+  width: auto;
+  margin-top: 22%;
+  box-shadow: 15px 15px #f0ead6;
+}
+
+p {
+  text-align: left;
+}
+
+#stadion{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 440px;
+  width: 500px;
+  padding: 10px;
+  background-color: white;
+  background-blend-mode: lighten;
+  z-index: -1;
+}
+
+#fløyen {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 350px;
+  width: 600px;
+}
+
+#Bryggen{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 650px;
+  height: 400px;
+}
+
+#Fisketorget{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#Koengen {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 504px;
+  width: 756px;
+}
+
+#begynn{
+  text-align: center;
+}
+
+.flex-container > div {
+  display: flex;
+  flex: 1;
+}
+
+.venstre{
+  flex: 50%;
+}
+
+.høyre{
+  flex: 50%;
+  margin-top: 200px;
+  justify-content: center;
+}

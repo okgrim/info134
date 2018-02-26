@@ -109,21 +109,15 @@ body {
   background-color: white;
   margin: 20px 20px;
   width: 100%
-  opacity: 0.9;
   position: relative;
-  order:
-  z-index: 1;
 }
 
-#innhold3 {
+#innholdside3 {
   padding: 30px;
   background-color: white;
   margin: 20px 20px;
   width: 100%
-  opacity: 0.9;
   position: relative;
-  order:
-  z-index: 1;
 }
 
 .google {
@@ -143,7 +137,6 @@ body {
   margin:20px;
   height: 350px;
   width:55%
-
 }
 
 #boxing {

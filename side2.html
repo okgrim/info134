@@ -1,45 +1,48 @@
+<!-- Struktur og innhold av Harald, dropdown buttons av David -->
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Side 2</title>
-    <script src="side2_script.js"></script>
-    <link href="stilen.css" type="text/css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activities</title>
+    <script src="../js/side2_script.js"></script>
+    <link href="../css/stilen.css" type="text/css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Work+Sans:300" rel="stylesheet">
   </head>
-  <body class="flex-container">
-    <header class="header">
-      <nav class="headerNav">
-        <ul class="headerUl">
-          <li><a href="index.html">Home</a>
-          <li class="dropdown"><a href="side2.html" class="dropbtn">Activities</a>
-            <div class="dropdown-content">
-              <a href="#stadion" type="button" onclick="brannKlikk()"> Brann Kamp </a>
-              <a href="#fløyen" type="button" onclick="fløyenKlikk()"> Fløyen </a>
-              <a href="#Bryggen" type="button" onclick="bryggenKlikk()"> Bryggen </a>
-              <a href="#Fisketorget" type="button" onclick="fisketorgetKlikk()"> Fisketorget </a>
-              <a href="#Koengen" type="button" onclick="koengenKlikk()"> Koengen </a>
-            </div>
-          <li class="dropdown"><a href="side3.html" class="dropbtn">Places</a>
-                <div class="dropdown-content">
-               <!-- Her inneholder linkene det nødvendige for å ha en tilhørende click+referanse til funksjon -->
-               <a href="#ricks" input id="ricksKnapp" type="button" value="clickme" onclick="ricksKlikk();myClick(0)">Ricks</a>
-               <a href="#donPippo" input id="pippoKnapp" type="button" value="clickme" onclick="pippoKlikk();myClick(1)">Don Pippo</a>
-               <a href="#garage" input id="garageKnapp" type="button" value="clickme" onclick="garageKlikk();myClick(2)">Garage</a>
-               <a href="#noStress" input id="stressKnapp" type="button" value="clickme" onclick="stressKlikk();myClick(3)">No Stress</a>
-               <a href="#gbiskopen" input id="biskopenKnapp" type="button" value="clickme" onclick="biskopenKlikk();myClick(4)">Biskopen</a>
-             </div>
-
-        </ul>
-      </nav>
-    </header>
-
-   <div id="pageContent">
-     <div class="innhold">
-       <h1> Activities in Bergen</h1>
-       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-   </div>
- </div>
-
+  <body id="aktiviteter">
+    <div class="containter">
+      <div class="headerBox">
+        <nav class="headerNav">
+          <ul class="headerUl">
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown"><a href="side2.html" class="dropbtn">Activities</a>
+              <ul class="dropdown-content">
+                <li><a href="#stadion" type="button" onclick="brannKlikk()"> Brann Kamp </a></li>
+                <li><a href="#fløyen" type="button" onclick="fløyenKlikk()"> Fløyen </a></li>
+                <li><a href="#Bryggen" type="button" onclick="bryggenKlikk()"> Bryggen </a></li>
+                <li><a href="#Fisketorget" type="button" onclick="fisketorgetKlikk()"> Fisketorget </a></li>
+                <li><a href="#Koengen" type="button" onclick="koengenKlikk()"> Koengen </a></li>
+              </ul></li>
+            <li class="dropdown"><a href="side3.html" class="dropbtn">Places</a>
+                  <ul class="dropdown-content">
+                 <!-- Her inneholder linkene det nødvendige for å ha en tilhørende click+referanse til funksjon -->
+                 <li><a href="#ricks" input id="ricksKnapp" type="button" value="clickme" onclick="ricksKlikk();myClick(0)">Ricks</a></li>
+                 <li><a href="#donPippo" input id="pippoKnapp" type="button" value="clickme" onclick="pippoKlikk();myClick(1)">Don Pippo</a></li>
+                 <li><a href="#garage" input id="garageKnapp" type="button" value="clickme" onclick="garageKlikk();myClick(2)">Garage</a></li>
+                 <li><a href="#noStress" input id="stressKnapp" type="button" value="clickme" onclick="stressKlikk();myClick(3)">No Stress</a></li>
+                 <li><a href="#gbiskopen" input id="biskopenKnapp" type="button" value="clickme" onclick="biskopenKlikk();myClick(4)">Biskopen</a></li>
+               </ul></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="innholdsBox">
+        <div id="pageContent">
+          <div class="innhold">
+            <h1> Activities in Bergen</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

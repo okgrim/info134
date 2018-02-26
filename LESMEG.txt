@@ -1,0 +1,12 @@
+Link til nettsiden på Wildboy: 
+
+Som en f¿rste tiln¾rming til gruppe-oppgave har dette gŒtt strŒlende for vŒr del. Fra og med starten stilte alle medlemmene med engasjement og arbeidsiver. Arbeidsoppgavene ble nesten naturlig fordelt, etter at vi tok en Œpen diskusjon om hva vi sŒ for oss at måtte gj¿res, og deretter tok til Œ arbeide på det vi foreslo. Vi benyttet oss av github, noe som gjorde det lett for oss Œ hente ut hverandres elementer og opprettholde st¿dig fremgang. 
+Ved hvert m¿te, kom vi frem til konkrete gj¿remŒl, og fordelte disse, samtidig som medlemmene var flinke til Œ sette seg inn i hva som hadde blitt gjort pŒ de andre frontene, slik at de selv l¾rte av fremgangsmåtene til samarbeidspartnerne sine. Idforslag ble tatt imot med åpne armer, alle parter har bragt noe til bordet og vi har v¾rt heldige med Œ ha det g¿y igjennom prossessen sŒ langt, sŒ vi ser frem til Œ fortsette med del 2 allerede,
+
+Gruppemedlemmer: Harald Sollohub Stensaker, Odin Kanstad Grimsvedt, David Kvasnes Olsen, Sondre Sveen Harila
+		
+
+Fordeling av oppgaver:
+Side 2 + css: Harald Sollohub Stensaker
+Google Maps & side 3: Odin Kanstad Grimstvedt
+Design & store deler av css: Sondre Sveen Harila & David Kvasnes

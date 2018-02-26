@@ -1,3 +1,5 @@
+// Harald skrev dette
+
 var brannTekst =
 '<div class="venstre">'+
 '<div class="innhold">'+
@@ -14,7 +16,7 @@ var brannTekst =
 '</div>'+
 '</div>'+
 '<div class="høyre">'+
-'<img id="stadion" src="Brann Stadion.jpg" alt="Bilde av Brann Stadion">' +
+'<img id="stadion" src="../img/Brann Stadion.jpg" alt="Bilde av Brann Stadion">' +
 '</div>';
 
 var fløyenTekst =
@@ -115,3 +117,7 @@ function fisketorgetKlikk(){
 function koengenKlikk(){
   document.getElementById("pageContent").innerHTML = (koengenTekst);
 }
+
+for(var i = 1; i < 11; i += 1) {
+      console.log(i);
+  }
