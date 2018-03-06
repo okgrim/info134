@@ -2,45 +2,70 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link href="stilen.css" type="text/css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../css/stilen.css" type="text/css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:300" rel="stylesheet">
     <title>Index</title>
-    <script src="script1.js"></script>
+    <!-- <script src="../js/side3_script1.js"></script> -->
   </head>
   <body id="index">
-    <!-- <header> <h1 id="hBilde1"> Bergen By</h1> </header> -->
-    <header class="header">
-      <nav class="headerNav">
-        <ul class="headerUl">
-          <li><a href="index.html">Home</a>
-          <li><a href="side2.html">Activities</a>
-          <li class="dropdown"><a href="side3.html" class="dropbtn">Places</a>
-                <div class="dropdown-content">
-               <!-- Her inneholder linkene det nødvendige for å ha en tilhørende click+referanse til funksjon -->
-               <a href="side3.html" input id="ricksKnapp" type="button" value="clickme" onclick="ricksKlikk();myClick(0)">Ricks</a>
-               <a href="side3.html" input id="pippoKnapp" type="button" value="clickme" onclick="pippoKlikk();myClick(1)">Don Pippo</a>
-               <a href="side3.html" input id="garageKnapp" type="button" value="clickme" onclick="garageKlikk();myClick(2)">Garage</a>
-               <a href="side3.html" input id="stressKnapp" type="button" value="clickme" onclick="stressKlikk();myClick(3)">No Stress</a>
-               <a href="side3.html" input id="biskopenKnapp" type="button" value="clickme" onclick="biskopenKlikk();myClick(4)">Biskopen</a>
-             </div>
-
-        </ul>
-      </nav>
-    </header>
-    <div id="textOgBilde">
-      <div class="left">
-        <div class="innhold">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-          enim ad minim veniam, quis nostrud exercitation ullamco laboris
-          nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.</p>
-        </div>
-        </div>
-        <div class="right">
-          <img id="boxing" src="gutta.jpg">
-        </div>
+    <div class="container">
+      <div class="headerBox">
+        <nav class="headerNav">
+          <ul class="headerUl">
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown"><a href="side2.html" class="dropbtn">Activities</a>
+              <ul class="dropdown-content">
+                <li><a href="#stadion" type="button" onclick="brannKlikk()"> Brann kamp </a></li>
+                <li><a href="#fløyen" type="button" onclick="fløyenKlikk()"> Fløyen </a></li>
+                <li><a href="#Bryggen" type="button" onclick="bryggenKlikk()"> Bryggen </a></li>
+                <li><a href="#Fisketorget" type="button" onclick="fisketorgetKlikk()"> Fisketorget </a></li>
+                <li><a href="#Koengen" type="button" onclick="koengenKlikk()"> Koengen </a></li>
+              </ul></li>
+            <li class="dropdown"><a href="side3.html" class="dropbtn">Places</a>
+              <ul class="dropdown-content">
+                   <!-- Her inneholder linkene det nødvendige for å ha en tilhørende click+referanse til funksjon -->
+                <li><a href="side3.html" input id="ricksKnapp" type="button" value="clickme" onclick="ricksKlikk();myClick(0)">Ricks</a></li>
+                <li><a href="side3.html" input id="pippoKnapp" type="button" value="clickme" onclick="pippoKlikk();myClick(1)">Don Pippo</a></li>
+                <li><a href="side3.html" input id="garageKnapp" type="button" value="clickme" onclick="garageKlikk();myClick(2)">Garage</a></li>
+                <li><a href="side3.html" input id="stressKnapp" type="button" value="clickme" onclick="stressKlikk();myClick(3)">No Stress</a></li>
+                <li><a href="side3.html" input id="biskopenKnapp" type="button" value="clickme" onclick="biskopenKlikk();myClick(4)">Biskopen</a></li>
+              </ul></li>
+              <li><a href="side5.html">WC</a></li>
+          </ul>
+        </nav>
       </div>
+      <div class="innholdsBox">
+        <div class="left">
+          <div class="innhold">
+            <h1>Velkommen til vår nettside</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing
+               elit, sed do eiusmod tempor incididunt ut labore et
+               dolore magna aliqua. Ut enim ad minim veniam, quis
+               nostrud exercitation ullamco laboris nisi ut aliquip
+               ex ea commodo consequat. Duis aute irure dolor in
+               reprehenderit in voluptate velit esse cillum dolore
+               eu fugiat nulla pariatur. Excepteur sint occaecat
+               cupidatat non proident, sunt inculpa qui officia
+               deserunt mollit anim id est laborum.</p>
+               <p>Lorem ipsum dolor sit amet, consectetur adipisicing
+                  elit, sed do eiusmod tempor incididunt ut labore et
+                  dolore magna aliqua. Ut enim ad minim veniam, quis
+                  nostrud exercitation ullamco laboris nisi ut aliquip
+                  ex ea commodo consequat. Duis aute irure dolor in
+                  reprehenderit in voluptate velit esse cillum dolore
+                  eu fugiat nulla pariatur. Excepteur sint occaecat
+                  cupidatat non proident, sunt inculpa qui officia
+                  deserunt mollit anim id est laborum.</p>
+
+          </div>
+        </div>
+          <div class="right">
+            <div class="background">
+              <img id="boxing" src="../img/gutta.jpg">
+            </div>
+          </div>
+      </div>
+    </div>
   </body>
 </html>
