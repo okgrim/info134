@@ -2,45 +2,26 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="stilen.css" type="text/css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:300" rel="stylesheet">
     <title>Index</title>
-    <script src="script1.js"></script>
   </head>
-  <body id="index">
-    <!-- <header> <h1 id="hBilde1"> Bergen By</h1> </header> -->
-    <header class="header">
-      <nav class="headerNav">
-        <ul class="headerUl">
-          <li><a href="index.html">Home</a>
-          <li><a href="side2.html">Activities</a>
-          <li class="dropdown"><a href="side3.html" class="dropbtn">Places</a>
-                <div class="dropdown-content">
-               <!-- Her inneholder linkene det nødvendige for å ha en tilhørende click+referanse til funksjon -->
-               <a href="side3.html" input id="ricksKnapp" type="button" value="clickme" onclick="ricksKlikk();myClick(0)">Ricks</a>
-               <a href="side3.html" input id="pippoKnapp" type="button" value="clickme" onclick="pippoKlikk();myClick(1)">Don Pippo</a>
-               <a href="side3.html" input id="garageKnapp" type="button" value="clickme" onclick="garageKlikk();myClick(2)">Garage</a>
-               <a href="side3.html" input id="stressKnapp" type="button" value="clickme" onclick="stressKlikk();myClick(3)">No Stress</a>
-               <a href="side3.html" input id="biskopenKnapp" type="button" value="clickme" onclick="biskopenKlikk();myClick(4)">Biskopen</a>
-             </div>
-
-        </ul>
-      </nav>
-    </header>
-    <div id="textOgBilde">
-      <div class="left">
-        <div class="innhold">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-          enim ad minim veniam, quis nostrud exercitation ullamco laboris
-          nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.</p>
-        </div>
-        </div>
-        <div class="right">
-          <img id="boxing" src="gutta.jpg">
+  <body>
+    <div id="alt">
+      <div id="inputen">
+        <input type="text" name="searchfield" id="search" value="Søk">
+        <button onclick="søk()">Søk!</button>
+    </div>
+      <div id="venstre">
+        <div id="smør">
         </div>
       </div>
+        <div id="googlemap"></div>
+    </div>
+          <script src="script3.js"></script>
+    <script async defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCIV_GOZX6Ttz_qy0Tq85PcK7UrQ2qkc9g&callback=initMap">
+</script>
   </body>
 </html>
