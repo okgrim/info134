@@ -1,26 +1,22 @@
-html{
-  height: 100%;
+body {
+  margin:0;
+  padding:0;
+  /* width:100%; */
 }
 
-#index{
-  font-family: 'Work Sans', sans-serif;
-  font-weight: 300;
-  background-image: url("bergen-gaagate.jpg");
-  height:100%;
+#index {
+  background-image: url('../img/bergen-gaagate.jpg');
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-color: #f4f5f7;
   background-size: cover;
-  margin:0;
-  padding: 0;
 }
 
 #aktiviteter{
   font-family: 'Work Sans', sans-serif;
   font-weight: 300;
-  background-image: url("bergen-lovstakken.jpg");
-  height:100%;
+  background-image: url('../img/bergen-lovstakken.jpg');
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -28,13 +24,13 @@ html{
   background-size: cover;
   margin:0;
   padding:0;
+  /* width:100%; */
 }
 
 #places{
   font-family: 'Work Sans', sans-serif;
   font-weight: 300;
-  background-image: url("bergen-fisketorget.jpg");
-  height:100%;
+  background-image: url('../img/bergen-fisketorget.jpg');
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -44,70 +40,119 @@ html{
   padding:0;
 }
 
-.header{
-    background: #f0ead6;
-    margin:0;
-    padding:0;
-    margin-bottom: 10%;
-    position: fixed;
-    opacity: 0.9;
-    width: 100%
-}
-
-.headerNav {
-  text-align:center;
-}
-
-nav ul{
-  margin: 0;
+/* Inndeling av flex-box*/
+/* Sondre */
+.container{
+  width:100%;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 300;
+  /* max-width: 800px; - Kan være et mulig design*/
+  display: flex;
+  flex-direction: column;
+  /* flex-flow: row wrap; */
+  justify-content: center;
+  margin:0;
   padding: 0;
-  font-size: 0;
+
 }
 
-nav li {
-  font-size:20px;
-  list-style: none;
-  display: inline-block;
-  size: cover;
-  padding: 20px 30px;
-  cursor: pointer;
-  text-transform: uppercase;
+.headerBox {
+  margin: 0;
+  padding:0;
+  border:0;
+  top:0;
+  width:100%;
+  z-index: 1;
+  order: 1;
+  display: flex;
+  justify-content: center;
+  position: fixed;
 }
 
-
-@media only screen and (max-width: 620px){
-  body {
-    font-size: 10px;
-  }
-  nav li {
-    font-size: 12px;
-  }
-}
-
-nav ul li:hover{
-  background: #f9f4f8;
-}
-
-nav a {
-  color: black;
-  display:block;
-  float: left;
-  text-decoration: none;
-}
-
-.innhold{
-  padding: 80px 35px 80px 35px;
-  background-color: white;
-  width: 500px;
-  float: left;
-  margin: 150px;
-  opacity: 0.9;
-  position: relative;
+.innholdsBox {
+  margin:0;
+  margin-top: 100px;
+  /* width:100%; */
+  padding:0;
+  order: 2;
   z-index: -1;
+  display: flex;
+  flex-direction: row;
+  position: relative;
 }
-/* UNDER HER KOMMER ODIN SINE GREIER */
+
+.innholdsBox2 {
+  margin-top:100px;
+  display: flex;
+  flex-direction: row;
+  /* width:100%; */
+}
+
+.innholdsBox3 {
+  margin:0;
+  /* margin-top: 100px; */
+  width:100%;
+  padding:0;
+  order: 2;
+  /* z-index: -1; */
+  display: flex;
+  flex-direction: row;
+  flex-flow: row wrap;
+  position: relative;
+}
+
+.left {
+  order: 1;
+
+}
+
+.right {
+  order: 2;
+  width: 40%;
+}
+
+.background {
+  margin: 20px 20px 0;
+}
+
+.innhold {
+  padding: 30px;
+  background-color: white;
+  margin: 20px 20px;
+  /* width: 100%; */
+  position: center;
+}
+
+#innholdside3 {
+  padding: 30px;
+  background-color: white;
+  margin: 10px 20px;
+  width: 100%;
+  position: relative;
+}
+
+.google {
+  display: flex;
+  flex-direction: row;
+  margin-top: 50px;
+  order: 3;
+}
+
+#googleDesc {
+  background: white;
+  margin: 10px 10px 20px 20px;
+  padding: 30px;
+  width: 35%;
+  position: relative;
+}
 
 #googlemap {
+  margin:10px 20px 20px 10px;
+  height: 440px;
+  width: 55%;
+}
+
+/* #googlemap {
   margin-left:auto;
   margin-right:auto;
   margin-bottom: 50px;
@@ -116,10 +161,106 @@ nav a {
   background-color: grey;
   position: bottom;
   text-align: center;
+} */
+
+#boxing {
+    height: 400px;
 }
+/* Inndeling av flex-box slutt*/
+
+/* Odins googlemap-css */
+/* #googlemap {
+  margin-left:auto;
+  margin-right:auto;
+  margin-bottom: 50px;
+  margin-top: 150;
+  width: 80%;
+  height: 400px;
+  background-color: grey;
+  position: bottom;
+  order: 3;
+  text-align: center;
+  z-index: -1;
+} */
+
+/*Odin slutt*/
+/* Sondre småjusteringer i css i places */
+
+/* */
+
+
+/*NAVBAR*/
+/* Sondre og David */
+
+nav {
+  background: #f0ead6;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 300;
+  margin:0;
+  width: 100%;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+nav ul li {
+  float: left;
+  list-style: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  padding:0 25px;
+  position: relative;
+  /* Må ha denne for å få til position absolute lenger nede */
+}
+
+nav ul li a {
+  display: block;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 300;
+  font-size:20px;
+  color: black;
+  padding: 22px 14px;
+  text-decoration: none;
+}
+
+nav ul li ul {
+  display: none;
+  background-color: white;
+  border-radius: 0px 0px 4px 4px;
+  padding: 0px; /* Hvis man vil ha ramme rundt dropdownelenemtene */
+  position: absolute;
+  /* For å unngå stort mellomrom mellom menyen dropdown elementene */
+}
+
+nav ul li:hover ul {
+  display: block;
+}
+
+nav ul li ul li {
+  width: 180px;
+  padding:0;
+}
+
+nav ul li ul li a {
+  padding: 8px 14px;
+  text-transform: none;
+}
+
+nav ul li ul li a:hover {
+  background-color: #f0ead6;
+}
+/*navbar slutt*/
+
+/* Sondre - Css for side 2 */
 
 #pageContent {
   text-align: center;
+  /* width:100% */
 }
 
 #tekst1 {
@@ -128,77 +269,34 @@ nav a {
   font-size: 1px;
 }
 
-/* Under kommer Davids drop-down navigasjon */
-.dropbtn {
-    opacity: 0.9;
-    padding: 0px;
-    font-size: 20px;
-    border: none;
-    cursor: pointer;
+.side2 {
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
-.dropdown {
-    position: relative;
+.venstre {
+  flex:2;
 }
 
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #FFFFFF;
-    min-width: 150px;
-    z-index: 1;
-    margin-top: 45px;
+.høyre {
+  flex:2;
 }
 
-.dropdown-content a {
-    color: black;
-    padding: 15px 15px;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown-content a:hover {
-  background-color: #f0ead6;
-  width: 100%;
-  font-size: 23px;
+.innhold2{
+  padding: 30px;
+  background-color: white;
+  margin: 20px 20px;
+  /* width: 100%; */
 
 }
 
-.dropdown:hover .dropdown-content {
-    display: block;
-}
+/* Sondre slutt */
 
-/* Harald sine right/left greier kommer nuh */
-/* - Venstre "boks"
-- Dimensjonene på bredde og høyde kan man
-justere etter vår tekst og bilde. */
-/* .left{
-  width: 45%;
-  height: 123px;
-  float: left;
-  margin-left: 15px;
-}
-
-/* - Høyre "boks", samme gjelder her som med venstre boks. */
-/* .right{
-  width: 45%;
-  height: 123px;
-  float: right;
-}  */
-
-#boxing {
-  height: 400px;
-  width: auto;
-  margin-top: 22%;
-  box-shadow: 15px 15px #f0ead6;
-}
-
-p {
-  text-align: left;
-}
+/*Harald sin css for side 2*/
 
 #stadion{
-  display: block;
+  margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
   height: 440px;
@@ -210,50 +308,159 @@ p {
 }
 
 #fløyen {
-  display: block;
+  margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
   height: 350px;
   width: 600px;
+  padding: 10px;
+  background-color: white;
+  background-blend-mode: lighten;
+  z-index: -1;
 }
 
 #Bryggen{
-  display: block;
+  margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
   width: 650px;
   height: 400px;
+  padding: 10px;
+  background-color: white;
+  background-blend-mode: lighten;
+  z-index: -1;
 }
 
 #Fisketorget{
-  display: block;
+  margin-top: 20px;
   margin-left: auto;
-  margin-right: auto;
+  margin-right: auto; padding: 10px;
+  background-color: white;
+  background-blend-mode: lighten;
+  z-index: -1;
 }
 
 #Koengen {
-  display: block;
+  margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
-  height: 504px;
-  width: 756px;
+  height: 403px;
+  width: 604px;
+  padding: 10px;
+  background-color: white;
+  background-blend-mode: lighten;
+  z-index: -1;
 }
 
 #begynn{
   text-align: center;
 }
 
-.flex-container > div {
-  display: flex;
-  flex: 1;
+/* Harald slutt*/
+
+/* Det er lurt å ha media-queries nederst i css-dokumentet.
+   Man bruker media-queries blant annet for å forandre størresle på
+   taggene avhengig av størrelsen på skjermen
+   Når man velger størrele på de forskjellige boksene kan det være lurt
+   å bruke width:xx%; for å gjøre boksene responsive.*/
+
+/* media queries av Sondre */
+@media (max-width:990px) {
+  body {
+    font-size: 14px;
+  }
+
+  .innholdsBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .innholdsBox2 {
+    margin-top:100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .innholdsBox3 {
+    margin:0;
+    margin-top: 100px;
+    /* width:100%; */
+    padding:0;
+    order: 2;
+    z-index: -1;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  .left {
+    order: 1;
+    /* width: 100%; */
+  }
+
+  .right {
+    order: 2;
+    /* width: 100%; */
+  }
+
+
+  .side2 {
+    display:flex;
+    flex-direction: column;
+  }
+
 }
 
-.venstre{
-  flex: 50%;
-}
+@media (max-width: 768px) {
+  .innholdsBox3{
+    align-items: center;
+  }
 
-.høyre{
-  flex: 50%;
-  margin-top: 200px;
-  justify-content: center;
+  .google{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+  }
+  .googleDesc {
+    width: 400px;
+    order:2
+  }
+
+  #googlemap{
+    order: 1;
+    width: 460px;
+  }
+  #innholdside3 {
+    width: 400px;
+  }
 }
+/* Sondre slutt */
+
+/* @media only screen and (max-width: 620px){
+  #index {
+    font-size: 10px;
+  }
+  nav li {
+    font-size: 12px;
+  }
+  .dropdown {
+    font-size: 12px;
+  }
+}
+@media /*only screen and*/ /*(max-width:760px){
+  #boxing {
+    width: 80%;
+    height: 80%;
+  }
+}
+@media only screen and (max-width:900px) {
+  .innhold {
+    max-width: 250px;
+    margin-top: 50px;
+  }
+  #boxing {
+    margin-left: 25px;
+  }
+} */
