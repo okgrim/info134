@@ -1,104 +1,582 @@
 body {
-  background;
-}
-p {
-  font-size: 14px;
-  text-align: center;
-}
-h1 {
-  text-align: center;
-  background-size: 500px;
+  margin:0;
+  padding:0;
+  /* width:100%; */
 }
 
-#hBilde1 {
-  font-family: monospace;
-  background-color: white;
-  background-image: url("Bergen Bryggen.jpg");
-  border-radius: 50px;
-  margin: 5px;
-  color:  #ffe6e6;
-  font-size: 50px;
-  text-shadow: 2px 2px #ff0000;
-  padding: 75px;
-  background-size:cover;
+#index {
+  background-image: url('../img/bergen-gaagate.jpg');
+  background-attachment: fixed;
   background-position: center;
-  display:;
+  background-repeat: no-repeat;
+  background-color: #f4f5f7;
+  background-size: cover;
 }
 
-header{
-    text-align: center;
+#aktiviteter{
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 300;
+  background-image: url('../img/bergen-lovstakken.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #f4f5f7;
+  background-size: cover;
+  margin:0;
+  padding:0;
+  /* width:100%; */
 }
 
-#mainNav {
-  display:inline-block;
-  border: black 3px double;
-  margin: 5px;
-  padding-right: 10px;
-
+#places{
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 300;
+  background-image: url('../img/bergen-fisketorget.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #f4f5f7;
+  background-size: cover;
+  margin:0;
+  padding:0;
 }
 
+/* Inndeling av flex-box*/
+/* Sondre */
+.container{
+  width:100%;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 300;
+  /* max-width: 800px; - Kan være et mulig design*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin:0;
+  padding: 0;
+}
 
-#knappleif {
+.headerBox {
+  margin: 0;
+  padding:0;
+  border:0;
+  top:0;
+  width:100%;
+  order: 1;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+}
+
+.innholdsBox {
+  margin:0;
+  margin-top: 100px;
+  /* width:100%; */
+  padding:0;
+  order: 2;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.innholdsBox2 {
+  margin-top:100px;
+  display: flex;
+  flex-direction: row;
+  /* width:100%; */
+}
+
+.innholdsBox3 {
+  margin:0;
+  margin-top: 100px;
+  width:100%;
+  padding:0;
+  order: 2;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  /* NB! z-index vil ødelegge googlemap-funksjonen! */
+}
+
+.left {
+  order: 1;
+}
+
+.right {
+  order: 2;
+  /* width: 40%; */
+}
+
+.background {
+  margin: 20px 20px 0;
+}
+
+.innhold {
+  padding: 30px;
+  background-color: white;
+  margin: 20px 20px;
+  /* width: 100%; */
+  position: center;
+}
+
+#innholdside3 {
+  padding: 30px;
+  background-color: white;
+  margin: 10px 20px;
+  /* width: 100%; */
+  position: relative;
+}
+
+#google {
+  display: flex;
+  flex-direction: row;
+  /* overflow: auto; */
+}
+
+#googleDesc {
+  background: white;
+  margin: 10px 20px;
+  padding: 30px;
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  /* position: relative; */
+}
+
+#googlemap {
+  margin: 10px 20px;
+  height: 440px;
+  width: 55%;
+  align-self: center;
+}
+
+#boxing {
+    height: 400px;
+}
+
+.descBilde{
+  width: 100px;
+  height: 100px;
+}
+/* Inndeling av flex-box slutt*/
+
+/*NAVBAR*/
+/* Sondre og David */
+
+nav {
+  background: #f2e4c4;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 300;
+  margin:0;
+  width: 100%;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+nav ul li {
+  float: left;
+  list-style: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  padding:0 25px;
+  position: relative;
+  /* Må ha denne for å få til position absolute lenger nede */
+}
+
+nav ul li a {
+  display: block;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 300;
+  font-size:22px;
+  color: black;
+  padding: 22px 14px;
+  text-decoration: none;
+}
+
+nav ul li ul {
+  display: none;
+  background-color: white;
+  border-radius: 0px 0px 4px 4px;
+  padding: 0px; /* Hvis man vil ha ramme rundt dropdownelenemtene */
+  position: absolute;
+  /* For å unngå stort mellomrom mellom menyen dropdown elementene */
+}
+
+nav ul li:hover ul {
+  display: block;
+}
+
+nav ul li ul li {
+  width: 180px;
+  padding:0;
+}
+
+nav ul li ul li a {
+  padding: 8px 14px;
+  text-transform: none;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+
+nav ul li ul li a:hover {
+  background-color: #f0ead6;
+}
+/*navbar slutt*/
+
+/* Sondre - Css for side 2 */
+
+#pageContent1 {
   text-align: center;
-  float: center;
+  /* width:100% */
 }
 
-#knappur {
+#tekst1 {
+  color: black;
   text-align: center;
+  font-size: 1px;
 }
 
-#mittNavn {
-  font-style: italic;
-  color: coral;
+.side2 {
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-.head{
-  text-align: center;
-  font-style: italic;
+.venstre {
 }
+
+.høyre {
+
+}
+
+.innhold2{
+  padding: 25px;
+  background-color: white;
+  margin: 20px 20px;
+  /* width: 100%; */
+}
+
+/* Sondre slutt */
+
+/*Harald sin css for side 2*/
 
 #stadion{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 20px;
+  height: 440px;
+  width: 500px;
+  padding: 10px;
+  background-color: white;
+  background-blend-mode: lighten;
+  z-index: -1;
 }
 
 #fløyen {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 20px;
   height: 350px;
   width: 600px;
+  padding: 10px;
+  background-color: white;
+  background-blend-mode: lighten;
+  z-index: -1;
 }
 
 #Bryggen{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 20px;
   width: 650px;
   height: 400px;
+  padding: 10px;
+  background-color: white;
+  background-blend-mode: lighten;
+  z-index: -1;
 }
 
 #Fisketorget{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 20px;
+  padding: 10px;
+  background-color: white;
+  background-blend-mode: lighten;
+  z-index: -1;
 }
 
 #Koengen {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 20px;
   height: 504px;
   width: 756px;
-}
-
-#liste{
-  font-size: 14px;
-  margin-left: 45%;
-  margin-right:-55%;
+  padding: 10px;
+  background-color: white;
+  background-blend-mode: lighten;
+  z-index: -1;
 }
 
 #begynn{
   text-align: center;
 }
+
+/* Harald slutt*/
+
+/* Sondre - Fa fa-bar for mobil */
+
+.fa-fa-bar {
+  width: 100%;
+  padding: 10px 20px;
+  /* background: #f0ead6; */
+  background: #f2e4c4;
+  font-size: 24px;
+  display: none;
+  cursor: pointer;
+}
+
+.active {
+  display: block;
+  display: flex;
+}
+
+/* Sondre slutt */
+
+/* Det er lurt å ha media-queries nederst i css-dokumentet.
+   Man bruker media-queries blant annet for å forandre størresle på
+   taggene avhengig av størrelsen på skjermen
+   Når man velger størrele på de forskjellige boksene kan det være lurt
+   å bruke width:xx%; for å gjøre boksene responsive.*/
+
+@media (max-width:1200px) {
+  .side2 {
+    display:flex;
+    flex-direction: column;
+  }
+}
+
+/* media queries av Sondre */
+@media (max-width:990px) {
+  body {
+    font-size: 14px;
+  }
+
+/* side 1 */
+  .innholdsBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left {
+    order: 1;
+    /* width: 100%; */
+  }
+
+  .right {
+    order: 2;
+    /* width: 100%; */
+  }
+
+/* side 2 */
+  .innholdsBox2 {
+    margin-top:100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .side2 {
+    display:flex;
+    flex-direction: column;
+  }
+
+  .venstre {
+
+  }
+
+/* side 3 */
+  .innholdsBox3 {
+    margin:0;
+    margin-top: 100px;
+    /* width:100%; */
+    padding:0;
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .fa-fa-bar {
+    display: block;
+    padding: 20px;
+  }
+
+  nav {
+    background: #f2e4c4;
+    width: 100%;
+  }
+
+  nav ul {
+    width: 100%;
+    display: none;
+    flex-direction: column;
+  }
+  nav ul li {
+    display: block;
+    width: 100%;
+    padding:0;
+    text-align: center;
+  }
+
+  nav ul li a {
+    padding: 10px;
+    font-size: 20px;
+    float: left;
+    padding-left: 40px;
+  }
+
+  nav ul li ul {
+    display: block;
+    width: 100%;
+    position:relative;
+    background-color: #f2e4c4;
+  }
+
+  nav ul li ul li {
+    width: 100%;
+    padding:0;
+    padding-left: 30px;
+    /* display: none; */
+  }
+
+  nav ul li ul li a {
+    font-size: 16px;
+  }
+
+  nav ul li ul li a:hover {
+    background-color: #f2e4c4;
+    text-decoration: underline;
+  }
+
+  nav ul li:hover {
+    background-color: #f2e4c4;
+    text-decoration: underline;
+  }
+
+  .innholdsBox3{
+    align-items: center;
+  }
+
+  #google{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+  }
+  #googleDesc {
+    width: 400px;
+    order:2
+  }
+
+  #googlemap{
+    order: 1;
+    width: 460px;
+  }
+  #innholdside3 {
+    width: 400px;
+  }
+}
+
+/* side 2 */
+  #stadion{
+    height: 330px;
+    width: 375px;
+  }
+
+  #fløyen {
+    height: 175px;
+    width: 300px;
+  }
+
+  #Bryggen{
+    width: 325px;
+    height: 200px;
+  }
+
+  #Fisketorget{
+    width: 300px;
+    height: 200px;
+  }
+
+  #Koengen {
+    height: 252px;
+    width: 378px;
+  }
+
+@media (max-width:530px) {
+  #googlemap {
+    width: 350px;
+    height: 300px;
+  }
+
+  #innholdside3 {
+    width: 290px;
+  }
+
+  #googleDesc {
+    width: 290px;
+  }
+
+  #boxing {
+    width: 225px;
+    height: 300px;
+  }
+}
+
+@media (max-width:376px) {
+  /* side 3 */
+  #innholdside3 {
+    width: 230px;
+  }
+
+  #googlemap {
+    width: 290px;
+  }
+
+  #googleDesc {
+    width: 230px;
+  }
+}
+
+@media (max-width:321px) {
+
+/* side 2 */
+  #stadion{
+    height: 235px;
+    width: 280px;
+  }
+
+  #fløyen {
+    height: 155px;
+    width: 280px;
+  }
+
+  #Bryggen{
+    width: 243px;
+    height: 150px;
+  }
+
+  #Fisketorget{
+    width: 280px;
+    height: 175px;
+  }
+
+  #Koengen {
+    height: 170px;
+    width: 270px;
+}
+
+/* side 3 */
+
+
+/* Sondre slutt */
