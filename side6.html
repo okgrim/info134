@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../css/stilen.css" type="text/css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans:300" rel="stylesheet">
+  <title> Min Favorittlekeplass </title>
+</head>
+<body id="index">
+  <div class="container">
+    <div class="headerBox">
+      <nav class="headerNav">
+        <div class="fa-fa-bar">
+          <i class="fa fa-bars menu" aria-hidden="true"></i>
+        </div>
+        <ul class="headerUl">
+          <li><a href="index.html">Home</a></li>
+          <li class="dropdown"><a href="side2.html" class="dropbtn">Activities <b class="caret"></b></a>
+            <ul class="dropdown-content">
+              <li><a href="#Stadion" type="button" onclick="brannKlikk();"> Brann kamp </a></li>
+              <li><a href="#Fløyen" type="button" onclick="fløyenKlikk()"> Fløyen </a></li>
+              <li><a href="#Bryggen" type="button" onclick="bryggenKlikk()"> Bryggen </a></li>
+              <li><a href="#Fisketorget" type="button" onclick="fisketorgetKlikk()"> Fisketorget </a></li>
+              <li><a href="#Koengen" type="button" onclick="koengenKlikk()"> Koengen </a></li>
+            </ul></li>
+          <li class="dropdown"><a href="side3.html" class="dropbtn">Places</a>
+            <ul class="dropdown-content">
+                 <!-- Her inneholder linkene det nødvendige for å ha en tilhørende click+referanse til funksjon -->
+              <li><a href="#ricksKnapp" type="button" value="clickme" onclick="ricksKlikk();myClick(0)">Ricks</a></li>
+              <li><a href="#pippoKnapp" type="button" value="clickme" onclick="pippoKlikk();myClick(1)">Don Pippo</a></li>
+              <li><a href="#garageKnapp" type="button" value="clickme" onclick="garageKlikk();myClick(2)">Garage</a></li>
+              <li><a href="#stressKnapp" type="button" value="clickme" onclick="stressKlikk();myClick(3)">No Stress</a></li>
+              <li><a href="#biskopenKnapp" type="button" value="clickme" onclick="biskopenKlikk();myClick(4)">Biskopen</a></li>
+            </ul></li>
+            <li><a href="side4.html">WC</a></li>
+            <li><a href="side5.html">Lekeplasser</a></li>
+        </ul>
+      </nav>
+    </div>
+<div class="lekeBox">
+  <div id="topptekst"> Min Favorittlekeplass: </div>
+  <select id="select">
+    <option> Velg din Favorittlekeplass... </option>
+  </select>
+</div>
+  <script src="../js/side6.js"></script>
+</body>
+</html>
