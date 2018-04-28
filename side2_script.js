@@ -1,6 +1,9 @@
+// Harald skrev dette
+
 var brannTekst =
+'<div class="side2">'+
 '<div class="venstre">'+
-'<div class="innhold">'+
+'<div class="innhold2">'+
 '<p><h1>Brann Kamp</h1></p>'+
 '<p> Bergen sitt største fotballag heter Brann, og de spiller i Eliteserien</p>' +
 '<p>Dersom man ønsker å se på fotball i Bergen, så er Brann kamp et fint alternativ.<br> <br></p>' +
@@ -14,12 +17,14 @@ var brannTekst =
 '</div>'+
 '</div>'+
 '<div class="høyre">'+
-'<img id="stadion" src="Brann Stadion.jpg" alt="Bilde av Brann Stadion">' +
+'<img id="stadion" src="../img/Brann Stadion.jpg" alt="Bilde av Brann Stadion">' +
+'</div>'+
 '</div>';
 
 var fløyenTekst =
+'<div class="side2">'+
 '<div class="venstre">'+
-'<div class="innhold">'+
+'<div class="innhold2">'+
 '<p><h1>Tur på Fløyen</h1></p>'+
 '<p> Bergen er kjent for sine 7 fjell. Et av disse fjellene heter Fløyen, og har en høyde på 320 moh</p>'+
 '<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do</p>'+
@@ -34,11 +39,13 @@ var fløyenTekst =
 '</div>'+
 '<div class="høyre">'+
 '<img id="fløyen" src="../img/Fløyen.jpg" alt="Bilde av Fløyen">'+
+'</div>'+
 '</div>';
 
 var bryggenTekst =
+'<div class="side2">'+
 '<div class="venstre">'+
-'<div class="innhold">'+
+'<div class="innhold2">'+
 '<p><h1> Bryggen </h1></p>'+
 '<p> Bryggen er en av de største turistattraksjonene i Bergen.</p>'+
 '<p>Bryggen, som ligger i Bergen Sentrum, var en gang brukt som handelsport på 1400 tallet. </p>'+
@@ -54,11 +61,13 @@ var bryggenTekst =
 '</div>'+
 '<div class="høyre">'+
 '<img id="Bryggen" src="../img/Bryggen.jpg" alt="Bilde av Bryggen">'+
+'</div>'+
 '</div>';
 
 var fisketorgetTekst =
+'<div class="side2">'+
 '<div class="venstre">'+
-'<div class="innhold">'+
+'<div class="innhold2">'+
 '<p><h1> Fisketorget </h1></p>'+
 '<p> Fisketorget i Bergen sentrum er svært kjent. Her kan man kjøpe fersk fisk og skalldyr, og spise ved vannet midt i Bergen Sentrum. </p>'+
 '<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do</p>'+
@@ -73,11 +82,13 @@ var fisketorgetTekst =
 '</div>'+
 '<div class="høyre">'+
 '<img id="Fisketorget" src="../img/Fisketorget.jpg" alt="bilde av Fisketorget">'+
+'</div>'+
 '</div>';
 
 var koengenTekst =
+'<div class="side2">'+
 '<div class="venstre">'+
-'<div class="innhold">'+
+'<div class="innhold2">'+
 '<p><h1> Konserter på Koengen </h1></p>'+
 '<p> Koengen er en park i Bergen der mange store konserter blir arrangert.</p>'+
 '<p>Blant annet, er det hvor Bergenfest (en stor musikkfestival i Bergen) finner plass.</p>'+
@@ -94,6 +105,7 @@ var koengenTekst =
 '</div>'+
 '<div class="høyre">'+
 '<img id="Koengen" src="../img/Koengen.jpg" alt="Bilde av Koengen">'+
+'</div>'+
 '</div>';
 
 function brannKlikk(){
@@ -115,3 +127,7 @@ function fisketorgetKlikk(){
 function koengenKlikk(){
   document.getElementById("pageContent").innerHTML = (koengenTekst);
 }
+
+for(var i = 1; i < 11; i += 1) {
+      console.log(i);
+  }

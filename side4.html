@@ -2,13 +2,105 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link href="stilen.css" type="text/css" rel="stylesheet">
-    <title>Test</title>
-    <script src="script1.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../css/stilen.css" type="text/css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:300" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <title>Side 3</title>
   </head>
-  <body>
-      <div id="konsertscener">
-
+  <body id="places" onload="listeVisning(); startTime();">
+    <div class="container">
+      <div class="headerBox">
+        <nav class="headerNav">
+          <div class="fa-fa-bar">
+            <i class="fa fa-bars menu" aria-hidden="true"></i>
+          </div>
+          <ul class="headerUl">
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown"><a href="side2.html" class="dropbtn">Activities</a>
+              <ul class="dropdown-content">
+                <li><a href="#Stadion" type="button" onclick="brannKlikk();"> Brann kamp </a></li>
+                <li><a href="#Fløyen" type="button" onclick="fløyenKlikk()"> Fløyen </a></li>
+                <li><a href="#Bryggen" type="button" onclick="bryggenKlikk()"> Bryggen </a></li>
+                <li><a href="#Fisketorget" type="button" onclick="fisketorgetKlikk()"> Fisketorget </a></li>
+                <li><a href="#Koengen" type="button" onclick="koengenKlikk()"> Koengen </a></li>
+              </ul></li>
+            <li class="dropdown"><a href="side3.html" class="dropbtn">Places</a>
+              <ul class="dropdown-content">
+                   <!-- Her inneholder linkene det nødvendige for å ha en tilhørende click+referanse til funksjon -->
+                <li><a href="#ricksKnapp" type="button" value="clickme" onclick="ricksKlikk();myClick(0)">Ricks</a></li>
+                <li><a href="#pippoKnapp" type="button" value="clickme" onclick="pippoKlikk();myClick(1)">Don Pippo</a></li>
+                <li><a href="#garageKnapp" type="button" value="clickme" onclick="garageKlikk();myClick(2)">Garage</a></li>
+                <li><a href="#stressKnapp" type="button" value="clickme" onclick="stressKlikk();myClick(3)">No Stress</a></li>
+                <li><a href="#biskopenKnapp" type="button" value="clickme" onclick="biskopenKlikk();myClick(4)">Biskopen</a></li>
+              </ul></li>
+              <li><a href="side4.html">WC</a></li>
+          </ul>
+        </nav>
       </div>
+      <div class="innholdsBox3">
+        <div id="innholdside4">
+          <div class="frittSøkBoks">
+            <input type="tekst" id="search"></input><button id="searchButton" onclick="searching()">Søk</button>
+          </div>
+          <div class="klokkeBoks">
+            <div id="txt"></div>
+          </div>
+          <div class="avansertBoks">
+            <button id="avansert" type="button" name="button" value="clickme" onclick="visAvansert();"> Avansert </button>
+            <div id="toggle">
+              <div class="box1-3">
+                <div class="box1">
+                  <input type="checkbox" id="mann"> Herre
+                </div>
+                <div class="box2">
+                  <input type="checkbox" id="dame"> Dame
+                </div>
+                <div class="box3">
+                  <input type="checkbox" id="stellerom"> Stellerom
+                </div>
+              </div>
+              <div class="box4-6">
+                <div class="box4">
+                  <input type="checkbox" id="åpen"> Åpent
+                </div>
+                <div class="box5">
+                  <input type="checkbox" id="gratis"> Gratis
+                </div>
+                <div class="box6">
+                  <input type="checkbox" id="handicap"> Handicap
+                </div>
+              </div>
+              <button id="sjekk" onclick="sjekk();" type="button" name="button">Sjekk</button>
+            </div>
+          </div>
+        </div>
+        <div id="google">
+          <div id="googleDesc1">
+            <div id="toalettListe">
+              <div class="header">
+                <h2>Toaletter i Bergen:</h2>
+              </div>
+              <div id="smør">
+              </div>
+            </div>
+          </div>
+          <div id="googlemap"></div>
+        </div>
+      </div>
+    </div>
+    <script src="../js/side4_script.js"></script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCIV_GOZX6Ttz_qy0Tq85PcK7UrQ2qkc9g&callback=initMap">
+    </script>
+    <!-- burger meny-bar script -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('.menu').click(function(){
+          $('ul').toggleClass('active');
+        })
+      })
+    </script>
   </body>
 </html>
