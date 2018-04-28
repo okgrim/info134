@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Index</title>
+    <link rel="stylesheet" href="datastilen.css">
+      <script type="text/javascript" src="datasett.js"></script>
+  </head>
+  <body>
+    <form>
+    <input type="radio" name="valg" value="alfabetisk" id="alfa"><label for="alfa">Alfabetisk</label>
+    <input type="radio" name="valg" value="kategori" id="beta"><label for="beta">Kategori</label>
+  </form>
+    <button onclick="visningsValg();">Klikk meg</button>
+  <div id="kategoriListe">
+    <h2>Velg en kategori</h2>
+    <ul id="herpes">
+    </ul>
+  </div>
+  <div id="hovedVisning">
+    <ul id="visningen">
+    </ul>
+  </div>
+  <div id="displayFrame">
+    <div id="describe">
+    </div>
+    <div id="grafen">
+      Menn<div id="col1"></div>
+      <div id="col2"></div>Kvinner
+    </div>
+  <div id="videoen">
+  <iframe id="avspiller" width="420" height="315"
+  src="">
+</iframe>
+</div>
+</div>
+  </body>
+</html>
