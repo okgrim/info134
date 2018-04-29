@@ -45,16 +45,17 @@ function listeFunksjon(lekeplass) {
 
 function clickFavourite(leke) {
   var kjørOption = document.getElementById("hemmeligDiv");
+  kjørOption.style.display = "block";
   var y = leke;
   kjørOption.innerHTML = "";
   var x = tull.options;
   for(i=0; i<x.length; i++){
     if(x[i].selected === true){
       var alt = JSON.parse(x[i].value);
-      kjørOption.innerHTML += "<div>" + "<p>" + "Du valgte " + alt.navn + " som din favorittlekeplass!" + "</p>" + "</br>" +
-      "Litt info om denne lekeplassen:" + "</br>" + "ID: " + alt.id + "</br>" +
-      "Longitude: " + alt.longitude +
-      "</br>" + "Latitude: " + alt.latitude + "</br>" + "</div>";
+      kjørOption.innerHTML += "<div>" + "<p id='hehe'>" + "Du valgte " + alt.navn + " som din favorittlekeplass!" + "</p>" +
+      "<p id='haha'>" + "Litt info om denne lekeplassen:" + "</p>" + "<div id='høhø'>" + "<b>" +  "ID: " + "</b> "+ alt.id + "</br>" +
+      "<b>" + "Longitude: " + "</b>" + alt.longitude +
+      "</br>" + "<b>" + "Latitude: " + "</b> "+ alt.latitude + "</br>" + "</div>" + "</div>";
     }
     // else {
     //   kjørOption.style.visibility = "hidden";
@@ -78,17 +79,17 @@ function distance(lat1, lon1, lat2, lon2) {
           return Math.round(dist*10)/10;
 }
 
-
 var avstandsListe = [];
 
 function forer(x){
+  var nærmest = document.getElementById('hemmeligDo');
+  nærmest.style.display = "block";
   var selected = x;
   var korteste = 1000;
   var vinneren;
 
   var lat1 = Number(selected.latitude);
   var lon1 = Number(selected.longitude);
-
 
   for(var i = 0; i < toalettliste.length; i++){
   var lat2 = Number(toalettliste[i].latitude);
@@ -99,7 +100,6 @@ function forer(x){
     vinneren = toalettliste[i];
   }
 }
-  document.getElementById('hemmeligDo').innerHTML = "Nærmeste toalett er: " + vinneren.place + "</br>" + "Med gangavstand på " + korteste + " kilometer";
-
-
+  nærmest.innerHTML = "<div id='høhø'>" + "<p id='haha'>" + "Nærmeste toalett er ved: "
+  + vinneren.place + "</p>" + "Med gangavstand på " + "<b>" + korteste + " kilometer" + "</b>" + "</div>";
 }

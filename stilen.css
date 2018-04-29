@@ -442,11 +442,23 @@ nav ul li ul li a:hover {
   background-color: white;
   opacity: 0.95;
   padding: 10px 40px;
-  margin-top: 0px;
+  margin-top: 20px;
 }
 
 #hehe {
   font-weight: bold;
+  font-size: 18px;
+}
+
+#haha {
+  font-weight: bold;
+  text-decoration: underline;
+  text-align: center;
+}
+
+#høhø {
+  text-align: center;
+  line-height: 2;
 }
 
 .head{

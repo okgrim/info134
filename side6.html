@@ -35,16 +35,17 @@
             </ul></li>
             <li><a href="side4.html">WC</a></li>
             <li><a href="side5.html">Lekeplasser</a></li>
+            <li><a href="side6.html"> Favorittlekeplass </a></li>
         </ul>
       </nav>
     </div>
 <div class="lekeBox">
   <div id="topptekst"> Min Favorittlekeplass: </div>
-  <select id="select" onchange="clickFavourite(this.value); forer(JSON.parse(this.value));">
+  <select id="select" onchange="clickFavourite(this.value), forer(JSON.parse(this.value));">
     <option> Velg din Favorittlekeplass... </option>
   </select>
-  <div id="hemmeligDiv"></div>
-  <div id="hemmeligDo"></div>
+  <div id="hemmeligDiv" style="display:none;"></div>
+  <div id="hemmeligDo" style="display:none;"></div>
 </div>
   <script src="../js/side6.js"></script>
 </body>
