@@ -1,26 +1,22 @@
-html{
-  height: 100%;
+body {
+  margin:0;
+  padding:0;
+  /* width:100%; */
 }
 
-#index{
-  font-family: 'Work Sans', sans-serif;
-  font-weight: 300;
-  background-image: url("bergen-gaagate.jpg");
-  height:100%;
+#index {
+  background-image: url('../img/bergen-gaagate.jpg');
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-color: #f4f5f7;
   background-size: cover;
-  margin:0;
-  padding: 0;
 }
 
 #aktiviteter{
   font-family: 'Work Sans', sans-serif;
   font-weight: 300;
-  background-image: url("bergen-lovstakken.jpg");
-  height:100%;
+  background-image: url('../img/bergen-lovstakken.jpg');
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -28,13 +24,13 @@ html{
   background-size: cover;
   margin:0;
   padding:0;
+  /* width:100%; */
 }
 
 #places{
   font-family: 'Work Sans', sans-serif;
   font-weight: 300;
-  background-image: url("bergen-fisketorget.jpg");
-  height:100%;
+  background-image: url('../img/bergen-fisketorget.jpg');
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -44,163 +40,233 @@ html{
   padding:0;
 }
 
-.header{
-    background: #f0ead6;
-    margin:0;
-    padding:0;
-    margin-bottom: 10%;
-    position: fixed;
-    opacity: 0.9;
-    width: 100%
+/* Inndeling av flex-box*/
+/* Sondre */
+.container{
+  width:100%;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 300;
+  /* max-width: 800px; - Kan være et mulig design*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin:0;
+  padding: 0;
 }
 
-.headerNav {
-  text-align:center;
+.headerBox {
+  margin: 0;
+  padding:0;
+  border:0;
+  top:0;
+  width:100%;
+  order: 1;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  position: fixed;
 }
 
-nav ul{
+.innholdsBox {
+  margin:0;
+  margin-top: 100px;
+  /* width:100%; */
+  padding:0;
+  order: 2;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.innholdsBox2 {
+  margin-top:100px;
+  display: flex;
+  flex-direction: row;
+  /* width:100%; */
+}
+
+.innholdsBox3 {
+  margin:0;
+  margin-top: 100px;
+  width:100%;
+  padding:0;
+  order: 2;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  /* NB! z-index vil ødelegge googlemap-funksjonen! */
+}
+
+.left {
+  order: 1;
+}
+
+.right {
+  order: 2;
+  /* width: 40%; */
+}
+
+.background {
+  margin: 20px 20px 0;
+}
+
+.innhold {
+  padding: 30px;
+  background-color: white;
+  margin: 20px 20px;
+  /* width: 100%; */
+  position: center;
+}
+
+#innholdside3 {
+  padding: 30px;
+  background-color: white;
+  margin: 10px 20px;
+  /* width: 100%; */
+  position: relative;
+}
+
+#google {
+  display: flex;
+  flex-direction: row;
+  /* overflow: auto; */
+}
+
+#googleDesc {
+  background: white;
+  margin: 10px 20px;
+  padding: 30px;
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  /* position: relative; */
+}
+
+#googlemap {
+  margin: 10px 20px;
+  height: 440px;
+  width: 55%;
+  align-self: center;
+}
+
+#boxing {
+    height: 400px;
+}
+
+.descBilde{
+  width: 100px;
+  height: 100px;
+}
+/* Inndeling av flex-box slutt*/
+
+/*NAVBAR*/
+/* Sondre og David */
+
+nav {
+  background: #f2e4c4;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 300;
+  margin:0;
+  width: 100%;
+}
+
+nav ul {
   margin: 0;
   padding: 0;
-  font-size: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
-nav li {
-  font-size:20px;
+nav ul li {
+  float: left;
   list-style: none;
-  display: inline-block;
-  size: cover;
-  padding: 20px 30px;
   cursor: pointer;
   text-transform: uppercase;
+  padding:0 25px;
+  position: relative;
+  /* Må ha denne for å få til position absolute lenger nede */
 }
 
-
-@media only screen and (max-width: 620px){
-  body {
-    font-size: 10px;
-  }
-  nav li {
-    font-size: 12px;
-  }
-}
-
-nav ul li:hover{
-  background: #f9f4f8;
-}
-
-nav a {
+nav ul li a {
+  display: block;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 300;
+  font-size:22px;
   color: black;
-  display:block;
-  float: left;
+  padding: 22px 14px;
   text-decoration: none;
 }
 
-.innhold{
-  padding: 80px 35px 80px 35px;
+nav ul li ul {
+  display: none;
   background-color: white;
-  width: 500px;
-  float: left;
-  margin: 150px;
-  opacity: 0.9;
-  position: relative;
-  z-index: -1;
-}
-/* UNDER HER KOMMER ODIN SINE GREIER */
-
-#googlemap {
-  margin-left:auto;
-  margin-right:auto;
-  margin-bottom: 50px;
-  width: 80%;
-  height: 400px;
-  background-color: grey;
-  position: bottom;
-  text-align: center;
+  border-radius: 0px 0px 4px 4px;
+  padding: 0px; /* Hvis man vil ha ramme rundt dropdownelenemtene */
+  position: absolute;
+  /* For å unngå stort mellomrom mellom menyen dropdown elementene */
 }
 
-#pageContent {
+nav ul li:hover ul {
+  display: block;
+}
+
+nav ul li ul li {
+  width: 180px;
+  padding:0;
+}
+
+nav ul li ul li a {
+  padding: 8px 14px;
+  text-transform: none;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+
+nav ul li ul li a:hover {
+  background-color: #f0ead6;
+}
+/*navbar slutt*/
+
+/* Sondre - Css for side 2 */
+
+#pageContent1 {
   text-align: center;
+  /* width:100% */
 }
 
 #tekst1 {
-  color: white;
+  color: black;
   text-align: center;
   font-size: 1px;
 }
 
-/* Under kommer Davids drop-down navigasjon */
-.dropbtn {
-    opacity: 0.9;
-    padding: 0px;
-    font-size: 20px;
-    border: none;
-    cursor: pointer;
+.side2 {
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-.dropdown {
-    position: relative;
+.venstre {
 }
 
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #FFFFFF;
-    min-width: 150px;
-    z-index: 1;
-    margin-top: 45px;
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 15px 15px;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown-content a:hover {
-  background-color: #f0ead6;
-  width: 100%;
-  font-size: 23px;
+.høyre {
 
 }
 
-.dropdown:hover .dropdown-content {
-    display: block;
+.innhold2{
+  padding: 25px;
+  background-color: white;
+  margin: 20px 20px;
+  /* width: 100%; */
 }
 
-/* Harald sine right/left greier kommer nuh */
-/* - Venstre "boks"
-- Dimensjonene på bredde og høyde kan man
-justere etter vår tekst og bilde. */
-/* .left{
-  width: 45%;
-  height: 123px;
-  float: left;
-  margin-left: 15px;
-}
+/* Sondre slutt */
 
-/* - Høyre "boks", samme gjelder her som med venstre boks. */
-/* .right{
-  width: 45%;
-  height: 123px;
-  float: right;
-}  */
-
-#boxing {
-  height: 400px;
-  width: auto;
-  margin-top: 22%;
-  box-shadow: 15px 15px #f0ead6;
-}
-
-p {
-  text-align: left;
-}
+/*Harald sin css for side 2*/
 
 #stadion{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 20px;
   height: 440px;
   width: 500px;
   padding: 10px;
@@ -210,50 +276,465 @@ p {
 }
 
 #fløyen {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 20px;
   height: 350px;
   width: 600px;
+  padding: 10px;
+  background-color: white;
+  background-blend-mode: lighten;
+  z-index: -1;
 }
 
 #Bryggen{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 20px;
   width: 650px;
   height: 400px;
+  padding: 10px;
+  background-color: white;
+  background-blend-mode: lighten;
+  z-index: -1;
 }
 
 #Fisketorget{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 20px;
+  padding: 10px;
+  background-color: white;
+  background-blend-mode: lighten;
+  z-index: -1;
 }
 
 #Koengen {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 20px;
   height: 504px;
   width: 756px;
+  padding: 10px;
+  background-color: white;
+  background-blend-mode: lighten;
+  z-index: -1;
 }
 
 #begynn{
   text-align: center;
 }
 
-.flex-container > div {
+/* Harald slutt*/
+
+/* Sondre - Fa fa-bar for mobil */
+
+.fa-fa-bar {
+  width: 100%;
+  padding: 10px 20px;
+  /* background: #f0ead6; */
+  background: #f2e4c4;
+  font-size: 24px;
+  display: none;
+  cursor: pointer;
+}
+
+.active {
+  display: block;
   display: flex;
-  flex: 1;
 }
 
-.venstre{
-  flex: 50%;
+/* Sondre slutt */
+
+/* css for side 5 */
+#innholdside5 {
+  display:flex;
+  flex-direction:column;
+  align-items: center;
+  padding: 30px;
+  background-color: white;
+  margin: 10px 20px;
+  /* width: 100%; */
+  position: relative;
 }
 
-.høyre{
-  flex: 50%;
-  margin-top: 200px;
+.avansert {
+  background-color: blue;
+
+}
+
+#toggle {
+  display: none;
+  margin: 10px;
+}
+
+#googleDesc1 {
+  background: white;
+  margin: 10px 20px;
+  padding: 15px;
+  width: 35%;
+  display: flex;
+  flex-direction: row;
+  height:380px;
+  /* position: relative; */
+}
+
+ #toalettListe {
+  font-size: 18px;
+  overflow: auto;
+   display: flex;
+  flex-direction: column;
+}
+
+
+#liste {
+  list-style: none;
+  padding: 10px 0px;
+}
+
+.lekeBox {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  margin-top: 70px;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
+
+#topptekst {
+  display: flex;
+  order: 1;
+  width: 30%;
+  justify-content: center;
+  padding: 20px 40px 10px 40px;
+  margin-top: 20px;
+  background-color: white;
+  opacity: 0.95;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#playgrounds {
+  display: flex;
+  order: 2;
+  line-height: 2;
+  width: 30%;
+  height: 500px;
+  overflow: scroll;
+  justify-content: center;
+  padding: 10px 40px 40px 40px;
+  background-color: white;
+  opacity: 0.95;
+}
+
+#select {
+  display: flex;
+  order: 3;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+#hemmeligDiv {
+  display: flex;
+  order: 4;
+  background-color: white;
+  opacity: 0.95;
+  padding: 20px 40px;
+  margin-top: 30px;
+}
+
+#hemmeligDo {
+  display: flex;
+  order: 5;
+  background-color: white;
+  opacity: 0.95;
+  padding: 10px 40px;
+  margin-top: 0px;
+}
+
+.head{
+  font-style: underline;
+}
+
+.icons{
+
+}
+
+
+/* .toalettsignal {
+  margin:10px;
+} */
+
+/* Sondre slutt */
+
+
+/* Det er lurt å ha media-queries nederst i css-dokumentet.
+   Man bruker media-queries blant annet for å forandre størresle på
+   taggene avhengig av størrelsen på skjermen
+   Når man velger størrele på de forskjellige boksene kan det være lurt
+   å bruke width:xx%; for å gjøre boksene responsive.*/
+
+@media (max-width:1200px) {
+  .side2 {
+    display:flex;
+    flex-direction: column;
+  }
+}
+
+/* media queries av Sondre */
+@media (max-width:990px) {
+  body {
+    font-size: 14px;
+  }
+
+/* side 1 */
+  .innholdsBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left {
+    order: 1;
+    /* width: 100%; */
+  }
+
+  .right {
+    order: 2;
+    /* width: 100%; */
+  }
+
+/* side 2 */
+  .innholdsBox2 {
+    margin-top:100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .side2 {
+    display:flex;
+    flex-direction: column;
+  }
+
+  .venstre {
+
+  }
+
+/* side 3 */
+  .innholdsBox3 {
+    margin:0;
+    margin-top: 100px;
+    /* width:100%; */
+    padding:0;
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .fa-fa-bar {
+    display: block;
+    padding: 20px;
+  }
+
+  nav {
+    background: #f2e4c4;
+    width: 100%;
+  }
+
+  nav ul {
+    width: 100%;
+    display: none;
+    flex-direction: column;
+  }
+  nav ul li {
+    display: block;
+    width: 100%;
+    padding:0;
+    text-align: center;
+  }
+
+  nav ul li a {
+    padding: 10px;
+    font-size: 20px;
+    float: left;
+    padding-left: 40px;
+  }
+
+  nav ul li ul {
+    display: block;
+    width: 100%;
+    position:relative;
+    background-color: #f2e4c4;
+  }
+
+  nav ul li ul li {
+    width: 100%;
+    padding:0;
+    padding-left: 30px;
+    /* display: none; */
+  }
+
+  nav ul li ul li a {
+    font-size: 16px;
+  }
+
+  nav ul li ul li a:hover {
+    background-color: #f2e4c4;
+    text-decoration: underline;
+  }
+
+  nav ul li:hover {
+    background-color: #f2e4c4;
+    text-decoration: underline;
+  }
+
+  .innholdsBox3{
+    align-items: center;
+  }
+
+
+
+  #google{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+  }
+  #googleDesc {
+    width: 400px;
+    order:2
+  }
+
+  #googleDesc1 {
+    width: 400px;
+    order:2
+  }
+
+  #googlemap{
+    order: 1;
+    width: 460px;
+  }
+  #innholdside3 {
+    width: 400px;
+  }
+
+  #innholdside5 {
+    width: 400px;
+  }
+}
+
+/* side 2 */
+  #stadion{
+    height: 330px;
+    width: 375px;
+  }
+
+  #fløyen {
+    height: 175px;
+    width: 300px;
+  }
+
+  #Bryggen{
+    width: 325px;
+    height: 200px;
+  }
+
+  #Fisketorget{
+    width: 300px;
+    height: 200px;
+  }
+
+  #Koengen {
+    height: 252px;
+    width: 378px;
+  }
+
+@media (max-width:530px) {
+  #googlemap {
+    width: 350px;
+    height: 300px;
+  }
+
+  #innholdside3 {
+    width: 290px;
+  }
+
+  #innholdside5 {
+    width: 290px;
+  }
+
+  #googleDesc {
+    width: 290px;
+  }
+
+  #googleDesc1 {
+    width: 290px;
+  }
+
+  #boxing {
+    width: 225px;
+    height: 300px;
+  }
+}
+
+@media (max-width:376px) {
+  /* side 3 */
+  #innholdside3 {
+    width: 230px;
+  }
+
+  #innholdside5 {
+    width: 230px;
+  }
+
+  #googlemap {
+    width: 290px;
+  }
+
+  #googleDesc {
+    width: 230px;
+  }
+
+  #googleDesc1 {
+    width: 230px;
+  }
+}
+
+@media (max-width:321px) {
+
+/* side 2 */
+  #stadion{
+    height: 235px;
+    width: 280px;
+  }
+
+  #fløyen {
+    height: 155px;
+    width: 280px;
+  }
+
+  #Bryggen{
+    width: 243px;
+    height: 150px;
+  }
+
+  #Fisketorget{
+    width: 280px;
+    height: 175px;
+  }
+
+  #Koengen {
+    height: 170px;
+    width: 270px;
+}
+
+#toalettlenke  {
+  background-color: orange;
+}
+#toalettlenke:hover {
+  background-color: black;
+  color: white;
+}
+
+/* side 3 */
+
+
+/* Sondre slutt */
