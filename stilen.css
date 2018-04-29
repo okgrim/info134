@@ -1,9 +1,9 @@
 body {
   margin:0;
   padding:0;
+  /* width:100%; */
 }
 
-/* bakgrunn */
 #index {
   background-image: url('../img/bergen-gaagate.jpg');
   background-attachment: fixed;
@@ -24,6 +24,7 @@ body {
   background-size: cover;
   margin:0;
   padding:0;
+  /* width:100%; */
 }
 
 #places{
@@ -40,10 +41,12 @@ body {
 }
 
 /* Inndeling av flex-box*/
+/* Sondre */
 .container{
   width:100%;
   font-family: 'Work Sans', sans-serif;
   font-weight: 300;
+  /* max-width: 800px; - Kan være et mulig design*/
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -64,10 +67,10 @@ body {
   position: fixed;
 }
 
-/* innhold */
 .innholdsBox {
   margin:0;
   margin-top: 100px;
+  /* width:100%; */
   padding:0;
   order: 2;
   display: flex;
@@ -79,6 +82,7 @@ body {
   margin-top:100px;
   display: flex;
   flex-direction: row;
+  /* width:100%; */
 }
 
 .innholdsBox3 {
@@ -99,6 +103,7 @@ body {
 
 .right {
   order: 2;
+  /* width: 40%; */
 }
 
 .background {
@@ -109,21 +114,22 @@ body {
   padding: 30px;
   background-color: white;
   margin: 20px 20px;
+  /* width: 100%; */
   position: center;
 }
 
-/* side 3 */
 #innholdside3 {
   padding: 30px;
   background-color: white;
   margin: 10px 20px;
+  /* width: 100%; */
   position: relative;
-  border-radius: 4px;
 }
 
 #google {
   display: flex;
   flex-direction: row;
+  /* overflow: auto; */
 }
 
 #googleDesc {
@@ -133,15 +139,14 @@ body {
   width: 35%;
   display: flex;
   flex-direction: column;
-  border-radius: 4px;
+  /* position: relative; */
 }
 
 #googlemap {
-  margin: 10px 20px 10px 10px;
+  margin: 10px 20px;
   height: 440px;
   width: 55%;
   align-self: center;
-  border-radius: 4px;
 }
 
 #boxing {
@@ -152,8 +157,11 @@ body {
   width: 100px;
   height: 100px;
 }
+/* Inndeling av flex-box slutt*/
 
 /*NAVBAR*/
+/* Sondre og David */
+
 nav {
   background: #f2e4c4;
   font-family: 'Work Sans', sans-serif;
@@ -210,6 +218,7 @@ nav ul li ul li {
 
 nav ul li ul li a {
   padding: 8px 14px;
+  text-transform: none;
   text-transform: uppercase;
   font-size: 18px;
 }
@@ -217,11 +226,13 @@ nav ul li ul li a {
 nav ul li ul li a:hover {
   background-color: #f0ead6;
 }
-/* navbar slutt */
+/*navbar slutt*/
 
-/* CSS for side 2 */
+/* Sondre - Css for side 2 */
+
 #pageContent1 {
   text-align: center;
+  /* width:100% */
 }
 
 #tekst1 {
@@ -236,11 +247,23 @@ nav ul li ul li a:hover {
   justify-content: space-between;
 }
 
+.venstre {
+}
+
+.høyre {
+
+}
+
 .innhold2{
   padding: 25px;
   background-color: white;
   margin: 20px 20px;
+  /* width: 100%; */
 }
+
+/* Sondre slutt */
+
+/*Harald sin css for side 2*/
 
 #stadion{
   margin: 20px;
@@ -294,19 +317,14 @@ nav ul li ul li a:hover {
   text-align: center;
 }
 
-.dropdown-content.active{
-  display: none;
-}
+/* Harald slutt*/
 
-.dropdown-content {
-  display: none;
-}
-
-/* hamburgermenybar for mobil */
+/* Sondre - Fa fa-bar for mobil */
 
 .fa-fa-bar {
   width: 100%;
   padding: 10px 20px;
+  /* background: #f0ead6; */
   background: #f2e4c4;
   font-size: 24px;
   display: none;
@@ -314,158 +332,144 @@ nav ul li ul li a:hover {
 }
 
 .active {
+  display: block;
   display: flex;
 }
 
-#innholdside4 {
+/* Sondre slutt */
+
+/* css for side 5 */
+#innholdside5 {
   display:flex;
-  flex-direction:row;
-  align-items: baseline;
-  justify-content: space-between;
+  flex-direction:column;
+  align-items: center;
   padding: 30px;
+  background-color: white;
   margin: 10px 20px;
-  background-color: #f2e4c4;
   /* width: 100%; */
   position: relative;
-  border-radius: 4px;
+}
+
+.avansert {
+  background-color: blue;
+
 }
 
 #toggle {
-  flex-direction: row;
-  font-size: 18px;
-  align-items: center;
   display: none;
-}
-
-.box1-3 {
-  display: flex;
-  margin-right: 5px;
-}
-
-.box4-6 {
-  display: flex;
-  margin-left: 5px;
-  margin-right: 5px;
-}
-
-div #toggle input > {
-  margin-left: 5px;
-}
-
-#search {
-  border-radius: 4px;
-  height: 20px;
-  font-size: 16px;
-  margin-top: 3px;
+  margin: 10px;
 }
 
 #googleDesc1 {
   background: white;
-  margin: 10px 10px 10px 20px;
+  margin: 10px 20px;
   padding: 15px;
   width: 35%;
   display: flex;
   flex-direction: row;
-  height:410px;
-  border-radius: 4px;
+  height:380px;
   /* position: relative; */
 }
 
  #toalettListe {
   font-size: 18px;
-  width: 100%;
   overflow: auto;
-  display: flex;
+   display: flex;
   flex-direction: column;
 }
+
 
 #liste {
   list-style: none;
   padding: 10px 0px;
 }
 
-#smør {
-  background-color: #f2e4c4;
-  border-radius: 4px;
-  padding-left: 5px;
-}
-
-
-.header h2 {
-  font-style: underline;
-  margin: 20px 0;
-}
-
-#toalettlenke  {
-  list-style: none;
-}
-
-#toalettlenke:hover {
-  background-color: white;
-  cursor: pointer;
-}
-
-/* knapper i innholdssiden */
-#avansert {
-  height: 30px;
-  background-color: white;
-  border-radius: 4px;
-  font-size: 14px;
-  margin: 0 5px;
-  margin-right: 10px;
-}
-
-.avansertBoks{
+.lekeBox {
   display: flex;
+  width: 100%;
+  height: 100%;
+  margin-top: 70px;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  order: 2;
 }
 
-.frittSøkBoks {
+#topptekst {
+  display: flex;
   order: 1;
+  width: 30%;
+  justify-content: center;
+  padding: 20px 40px 10px 40px;
+  margin-top: 20px;
+  background-color: white;
+  opacity: 0.95;
+  font-size: 20px;
+  font-weight: bold;
 }
 
+#playgrounds {
+  display: flex;
+  order: 2;
+  line-height: 2;
+  width: 30%;
+  height: 500px;
+  overflow: scroll;
+  padding: 10px 40px 40px 40px;
+  background-color: white;
+  opacity: 0.95;
+  flex-direction: column;
+}
 
-.klokkeBoks {
+#select {
+  display: flex;
   order: 3;
+  justify-content: center;
+  margin-top: 30px;
 }
 
-#sjekk  {
-  height: 30px;
+#hemmeligDiv {
+  display: flex;
+  order: 4;
   background-color: white;
-  border-radius: 4px;
-  font-size: 14px;
-  margin: 0 5px;
-  margin-bottom: 5px;
+  opacity: 0.95;
+  padding: 20px 40px;
+  margin-top: 30px;
 }
 
-#searchButton {
-  height: 30px;
+#hemmeligDo {
+  display: flex;
+  order: 5;
   background-color: white;
-  border-radius: 4px;
-  font-size: 14px;
-  margin: 0 5px;
+  opacity: 0.95;
+  padding: 10px 40px;
+  margin-top: 0px;
 }
 
-/* klokken */
-#txt {
-  align-self:center;
-  font-size: 26px;
-  border-style: solid;
-  border-radius: 4px;
-  border-color: white;
-  box-sizing: border-box;
-  border-spacing: inherit;
+#hehe {
+  font-weight: bold;
 }
+
+.head{
+  font-style: underline;
+}
+
+.icons{
+
+}
+
+
+/* .toalettsignal {
+  margin:10px;
+} */
+
+/* Sondre slutt */
+
 
 /* Det er lurt å ha media-queries nederst i css-dokumentet.
    Man bruker media-queries blant annet for å forandre størresle på
    taggene avhengig av størrelsen på skjermen
    Når man velger størrele på de forskjellige boksene kan det være lurt
-   å bruke width:xx%; for å gjøre boksene responsive. */
-
-
-/* media-queries */
+   å bruke width:xx%; for å gjøre boksene responsive.*/
 
 @media (max-width:1200px) {
   .side2 {
@@ -474,75 +478,7 @@ div #toggle input > {
   }
 }
 
-@media (max-width:1060px) {
-
-  #avansert {
-    height: 30px;
-  }
-
-  .avansertBoks {
-    align-items: center;
-  }
-
-  #searchButton {
-    margin-top:10px;
-  }
-
-  #sjekk {
-    margin-top:10px;
-  }
-
-  .klokkeBoks {
-    margin-top:10px;
-  }
-
-  #toggle {
-    flex-direction: row;
-  }
-
-  .box1 {
-    display: flex;
-    flex-direction: row;
-  }
-
-  .box2 {
-    display: flex;
-    flex-direction: row;
-  }
-
-  .box3 {
-    display: flex;
-    flex-direction: row;
-  }
-
-  .box4 {
-    display: flex;
-    flex-direction: row;
-  }
-
-  .box5 {
-    display: flex;
-    flex-direction: row;
-  }
-
-  .box6 {
-    display: flex;
-    flex-direction: row;
-  }
-  #toggle {
-    justify-content: center;
-  }
-
-  .box1-3 {
-    display: block;
-  }
-
-  .box4-6 {
-    display: block;
-  }
-}
-
-/* media queries */
+/* media queries av Sondre */
 @media (max-width:990px) {
   body {
     font-size: 14px;
@@ -593,12 +529,6 @@ div #toggle input > {
     flex-direction: column;
     position: relative;
   }
-
-  /* WC */
-  #smør {
-    font-size: 14px;
-  }
-
 }
 
 @media (max-width: 768px) {
@@ -606,51 +536,6 @@ div #toggle input > {
   .fa-fa-bar {
     display: block;
     padding: 20px;
-  }
-
-  .innholdsBox2 {
-    margin-top: 68px;
-  }
-
-  .mobil-meny{
-    background-color: white;
-    margin: 10px 20px;
-    position: relative;
-  }
-
-  .dropdown-content{
-    margin: 0;
-    padding: 0;
-    width:100%;
-    display: flex;
-    list-style: none;
-    background-color: white;
-    flex-direction: row;
-    cursor: pointer;
-    justify-content: center;
-    position: relative;
-    border-radius: 4px;
-  }
-
-  .dropdown-content li {
-    padding: 15px 15px;
-    position: relative;
-  }
-
-  .dropdown-content a {
-    padding: 15px 10px;
-    font-family: 'Work Sans', sans-serif;
-    font-weight: 300;
-    font-size:20px;
-    text-transform: uppercase;
-    text-decoration: none;
-    margin: 10px;
-    color: black;
-  }
-
-  .dropdown-content li :hover {
-    background-color: #f0ead6;
-    border-radius:4px;
   }
 
   nav {
@@ -709,6 +594,8 @@ div #toggle input > {
     align-items: center;
   }
 
+
+
   #google{
     display: flex;
     flex-direction: column;
@@ -717,31 +604,26 @@ div #toggle input > {
   }
   #googleDesc {
     width: 400px;
-    order:2;
+    order:2
   }
 
   #googleDesc1 {
-    width: 420px;
-    order:2;
-    padding: 20px;
-    margin: 10px;
+    width: 400px;
+    order:2
   }
 
   #googlemap{
     order: 1;
     width: 460px;
-    margin: 10px;
   }
   #innholdside3 {
     width: 400px;
   }
 
-  #innholdside4 {
+  #innholdside5 {
     width: 400px;
-    flex-direction: row;
-    align-items: center;
-    flex-wrap: wrap;
   }
+}
 
 /* side 2 */
   #stadion{
@@ -769,54 +651,7 @@ div #toggle input > {
     width: 378px;
   }
 
-  /* WC */
-
-  #smør {
-    font-size: 18px;
-  }
-
-  .klokkeBoks {
-    order: 2;
-    align-self: flex-end;
-  }
-
-  .frittSøkBoks {
-    order: 1;
-    margin-left: 6px;
-  }
-
-  .avansertBoks {
-    margin-right: 50px;
-    margin-top: 20px;
-    order:3;
-    flex-wrap: wrap;
-  }
-
-  #avansert {
-    margin-bottom: 20px;
-  }
-
-  #toggle {
-    margin-left: 5px;
-  }
-}
-
-@media (max-width: 768px) {
-  .dropdown-content a {
-    font-size: 14px;
-    margin-left: 0;
-  }
-  .dropdown-content li {
-    padding-left: 0;
-    padding-right: 0;
-  }
-
 @media (max-width:530px) {
-
-  .dropdown-content a {
-    margin: 0;
-  }
-
   #googlemap {
     width: 350px;
     height: 300px;
@@ -826,7 +661,7 @@ div #toggle input > {
     width: 290px;
   }
 
-  #innholdside4 {
+  #innholdside5 {
     width: 290px;
   }
 
@@ -835,38 +670,12 @@ div #toggle input > {
   }
 
   #googleDesc1 {
-    width: 310px;
+    width: 290px;
   }
 
   #boxing {
     width: 225px;
     height: 300px;
-  }
-
-  .klokkeBoks {
-    margin-left: 6px;
-    margin-top: 20px;
-  }
-  #avansert {
-    margin-bottom: 0;
-  }
-
-  #toggle {
-    margin-top: 20px;
-  }
-
-}
-
-@media (max-width:467px) {
-  .dropdown-content {
-    flex-direction: column;
-    justify-content: flex-start;
-  }
-  .dropdown-content a {
-    margin-right: 0;
-    padding-left: 50px;
-    padding-right: 50px;
-
   }
 }
 
@@ -876,7 +685,7 @@ div #toggle input > {
     width: 230px;
   }
 
-  #innholdside4 {
+  #innholdside5 {
     width: 230px;
   }
 
@@ -889,17 +698,7 @@ div #toggle input > {
   }
 
   #googleDesc1 {
-    width: 250px;
-  }
-
-  #searchButton {
-    margin-top: 10px;
-    padding: 3px;
-  }
-
-  #sjekk {
-    padding: 0;
-    margin: 0;
+    width: 230px;
   }
 }
 
@@ -929,5 +728,17 @@ div #toggle input > {
   #Koengen {
     height: 170px;
     width: 270px;
-  }
 }
+
+#toalettlenke  {
+  background-color: orange;
+}
+#toalettlenke:hover {
+  background-color: black;
+  color: white;
+}
+
+/* side 3 */
+
+
+/* Sondre slutt */
