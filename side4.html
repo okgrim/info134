@@ -3,10 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <link href="../css/stilen.css" type="text/css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Work+Sans:300" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <title>Side 3</title>
+    <title>Side 4</title>
   </head>
   <body id="places" onload="listeVisning(); startTime();">
     <div class="container">
@@ -38,42 +39,30 @@
           </ul>
         </nav>
       </div>
-      <div class="innholdsBox3">
-        <div id="innholdside4">
-          <div class="frittSøkBoks">
-            <input type="tekst" id="search"></input><button id="searchButton" onclick="searching()">Søk</button>
-          </div>
-          <div class="klokkeBoks">
-            <div id="txt"></div>
-          </div>
-          <div class="avansertBoks">
-            <button id="avansert" type="button" name="button" value="clickme" onclick="visAvansert();"> Avansert </button>
-            <div id="toggle">
-              <div class="box1-3">
-                <div class="box1">
-                  <input type="checkbox" id="mann"> Herre
-                </div>
-                <div class="box2">
-                  <input type="checkbox" id="dame"> Dame
-                </div>
-                <div class="box3">
-                  <input type="checkbox" id="stellerom"> Stellerom
-                </div>
-              </div>
-              <div class="box4-6">
-                <div class="box4">
-                  <input type="checkbox" id="åpen"> Åpent
-                </div>
-                <div class="box5">
-                  <input type="checkbox" id="gratis"> Gratis
-                </div>
-                <div class="box6">
-                  <input type="checkbox" id="handicap"> Handicap
-                </div>
-              </div>
-              <button id="sjekk" onclick="sjekk();" type="button" name="button">Sjekk</button>
-            </div>
-          </div>
+      <div class="innholdsBox3"> <!--kan jeg ta dette vekk-->
+        <div id="innholdside5">
+          <div id="søkelinje">
+          <input type="tekst" id="search" onkeyup="scan();"></input>
+          <button onclick="sjekk();">Søk!</button>
+          <button class="avansert" type="button" name="button" id="avansertKnapp" value="clickme" onclick="visAvansert();"> Avansert </button>
+        </div>
+          <!-- Du får fyre dette inn i scriptet ditt, Odin, hvis kke du har det fra før -->
+            <input type="checkbox" id="female"> female
+            <input type="checkbox" id="male"> male
+            <input type="checkbox" id="openNow"> openNow
+            <input type="checkbox" id="open"> open
+            <input type="checkbox" id="free"> free
+            <input type="checkbox" id="nursery"> nursery
+            <input type="checkbox" id="wheelchair"> wheelchair
+            <input type="text" id="maxPrice"> maxPrice
+            <!-- <input type="checkbox" id="mann" class="checker"> Herre
+            <input type="checkbox" id="dame" class="checker"> Dame
+            <input type="checkbox" id="stellerom" class="checker"> Stellerom
+            <input type="checkbox" id="åpen" class="checker"> Åpent
+            <input type="checkbox" id="gratis" class="checker"> Gratis
+            <input type="checkbox" id="handicap" class="checker"> Handicap
+            <button onclick="sjekk();" type="button" name="button">Søk</button>
+            <!- Ikke fullført, mangler bedre conditions --> -->
         </div>
         <div id="google">
           <div id="googleDesc1">
@@ -87,9 +76,10 @@
           </div>
           <div id="googlemap"></div>
         </div>
+        <div id="txt"></div>
       </div>
     </div>
-    <script src="../js/side4_script.js"></script>
+    <script src="../js/script3.js"></script>
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCIV_GOZX6Ttz_qy0Tq85PcK7UrQ2qkc9g&callback=initMap">
     </script>
@@ -102,5 +92,6 @@
         })
       })
     </script>
+    <button class="avansert1"> click me! </button>
   </body>
 </html>
