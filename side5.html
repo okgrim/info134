@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../css/stilen.css" type="text/css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:300" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <title> Norge Rundt </title>
+  </head>
+  <body id="index">
+    <div class="container">
+      <div class="headerBox">
+        <nav class="headerNav">
+          <ul class="headerUl">
+            <div class="hamburger" onclick="hamburger();">
+              <div class="bar1"></div>
+              <div class="bar2"></div>
+              <div class="bar3"></div>
+            </div>
+            <div id="li">
+              <li><a href="../index.html" onclick="hamburger();">Home</a></li>
+              <li><a href="side2.html" onclick="hamburger();">Toilets</a></li>
+              <li><a href="side3.html" onclick="hamburger();">Playground</a></li>
+              <li><a href="side4.html" onclick="hamburger();">Favourite Playground</a></li>
+              <li><a href="side5.html" onclick="hamburger();">Norge Rundt</a></li>
+            </div>
+          </ul>
+        </nav>
+      </div>
+      <div class="innholdsBox-datasett">
+        <div class="venstre">
+          <div class="venstre-visningsvalg">
+            <form id="form">
+              <input type="radio" name="valg" onclick="kommuneBrowse();" value="alfabetisk" id="alfa"><label for="alfa">Kommuner</label>
+              <input type="radio" name="valg" onclick="temaSort();" value="kategori" id="beta"><label for="beta">Kategori</label>
+            </form>
+          </div>
+          <div id="kategoriListe">
+            <h2 id="switchen">Velg en kategori</h2>
+            <ul id="herpes"></ul>
+          </div>
+          <div id="hovedVisning">
+            <ul id="visningen"></ul>
+          </div>
+        </div>
+        <div class="høyre">
+          <div id="displayFrame">
+            <div id="describe"></div>
+            <div id="grafen">
+              <div class="menn">
+                <p id="menn">Menn:</p>
+                <div id="col1"></div>
+              </div>
+              <div class="kvinner">
+                <p id="kvinner">Kvinner:</p>
+                <div id="col2"></div>
+              </div>
+            </div>
+            <div id="videoen">
+              <iframe id="avspiller" width="420" height="315" src=""></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="../js/side5.js"></script>
+  </body>
+</html>
