@@ -78,41 +78,49 @@ function clickFavourite(leke) {
   }
 }
 
-//Funksjon basert på Haversine formellen for å regne ut distanse
-function distance(lat1, lon1, lat2, lon2) {
-        var radlat1 = Math.PI * lat1/180;
-        var radlat2 = Math.PI * lat2/180;
-        var radlon1 = Math.PI * lon1/180;
-        var radlon2 = Math.PI * lon2/180;
-        var t = lon1-lon2;
-        var radt = Math.PI * t/180;
-        var dist = Math.sin(radlat1) * Math.sin(radlat2) + Math.cos(radlat1) * Math.cos(radlat2) * Math.cos(radt);
-          dist = Math.acos(dist);
-          dist = dist * 180/Math.PI;
-          dist = dist * 60 * 1.1515;
-          dist = dist * 1.609344;
-          return Math.round(dist*10)/10;
+function distance(lat1, lon1, lat2, lon2){
+var r = 6362.058; //Radius til jorden i km på latitude 60,23 som er Bergen
+var dlon = lon2 - lon1;
+var dlat = lat2 - lat1;
+var rlat1 = Math.PI * lat1/180; //Gjør om til radianer
+var rlat2 = Math.PI * lat2/180;
+var rdlon = Math.PI * dlon/180;
+var rdlat = Math.PI * dlat/180;
+
+var a = Math.pow(Math.sin(rdlat/2), 2) +
+        Math.cos(rlat1) * Math.cos(rlat2) *
+        Math.pow(Math.sin(rdlon/2), 2);
+
+var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+
+var dstnc = c * r; //Ganger ut med radius til jorden i km for å få verdien i km
+
+console.log(dstnc);
+
+dstnc = Math.round(dstnc*100)/100;
+
+return dstnc;
 }
 
-
-function forer(x){//Denne funksjonen fôrer distance() med favorittlekeplassen's koordinater, samt
-//looper igjennom alle toalettene og finner minste avstand basert på hvert toaletts koordinater.
+/* Denne funksjonen fôrer distance() med favorittlekeplassen's koordinater, samt
+looper igjennom alle toalettene og finner minste avstand basert på hvert toaletts koordinater. */
+function forer(x){
   var nærmest = document.getElementById('hemmeligDo');
   nærmest.style.display = "block";
   var selected = x;//variabel som gis fra select/option i HTMLen, og setter favoritten
   var korteste = 1000; //Setter en høy startverdi for å forsikre om at avstanden som gis ut til slutt er innenfor rammene vi vil ha
   var vinneren; //Variabel som til slutt skal holde toalett-objektet som har kortest avstand fra lekeplassen
 
-  var lat1 = Number(selected.latitude);//latLng for favoritten er gitt fra og med forer() kalles
+  var lat1 = Number(selected.latitude); //latLng for favoritten er gitt fra og med forer() kalles
   var lon1 = Number(selected.longitude);
 
   for(var i = 0; i < toalettliste.length; i++){ // itererer igjennom toalettene, og oppdaterer var vinneren og avstanden hvis
-  var lat2 = Number(toalettliste[i].latitude); // de har lavere avstandsverdi enn nåværende vinner/avstand
-  var lon2 = Number(toalettliste[i].longitude);
-  var attempt = distance(lat1,lon1,lat2,lon2);
-  if(attempt < korteste){
-    korteste = attempt;
-    vinneren = toalettliste[i];
+    var lat2 = Number(toalettliste[i].latitude); // de har lavere avstandsverdi enn nåværende vinner/avstand
+    var lon2 = Number(toalettliste[i].longitude);
+    var attempt = distance(lat1,lon1,lat2,lon2);
+    if(attempt < korteste){
+      korteste = attempt;
+      vinneren = toalettliste[i];
   }
 }
   nærmest.innerHTML = "<div id='lekeInfo'>" + "<p id='altNavn'>" + "Nærmeste toalett er ved: "
