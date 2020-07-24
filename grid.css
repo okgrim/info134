@@ -1,0 +1,268 @@
+html{
+  height: 100%;
+}
+
+#index{
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 300;
+  background-image: url("bergen-gaagate.jpg");
+  height:100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #f4f5f7;
+  background-size: cover;
+  margin:0;
+  padding: 0;
+}
+
+#aktiviteter{
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 300;
+  background-image: url("bergen-lovstakken.jpg");
+  height:100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #f4f5f7;
+  background-size: cover;
+  margin:0;
+  padding:0;
+}
+
+#places{
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 300;
+  background-image: url("bergen-fisketorget.jpg");
+  height:100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #f4f5f7;
+  background-size: cover;
+  margin:0;
+  padding:0;
+}
+
+.grid{
+  display: grid;
+  grid-template-columns: 1fr 500px 500px 1fr;
+  grid-template-rows: 64px 1fr;
+  grid-template-areas:
+  ". header header ."
+  ". left right .";
+}
+
+.header{
+  grid-area: header;
+}
+
+.left
+{
+  grid-area: left;
+  margin-left: 0;
+}
+
+.right{
+  grid-area: right;
+}
+
+.header{
+    background: #f0ead6;
+    margin:0;
+    padding:0;
+    margin-bottom: 10%;
+    position: fixed;
+    opacity: 0.9;
+    width: 100%
+}
+
+.headerNav {
+  text-align:center;
+}
+
+nav ul{
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+}
+
+nav li {
+  font-size:20px;
+  list-style: none;
+  display: inline-block;
+  size: cover;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+nav ul li:hover{
+  background: #f9f4f8;
+}
+
+nav a {
+  color: black;
+  display:block;
+  float: left;
+  text-decoration: none;
+  padding: 20px 30px;
+
+  /*Ved å ha denne i a og ikke i li gjør at places-
+  blokken blir tullete */
+}
+
+.innhold{
+  padding: 80px 35px 80px 35px;
+  background-color: white;
+  width: 500px;
+  float: left;
+  margin: 150px;
+  opacity: 0.9;
+  position: relative;
+  z-index: -1;
+  margin-left: 45px;
+  margin-right: 45px;
+  max-width: 450px;
+}
+/* UNDER HER KOMMER ODIN SINE GREIER */
+
+#googlemap {
+  margin-left:auto;
+  margin-right:auto;
+  margin-bottom: 50px;
+  width: 80%;
+  height: 400px;
+  background-color: grey;
+  position: bottom;
+  text-align: center;
+}
+
+#pageContent {
+  text-align: center;
+}
+
+#tekst1 {
+  color: white;
+  text-align: center;
+  font-size: 1px;
+}
+
+/* Under kommer Davids drop-down navigasjon */
+.dropbtn {
+    opacity: 0.9;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 300;
+    border: none;
+    cursor: pointer;
+    padding: 20px 30px;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #FFFFFF;
+    min-width: 150px;
+    z-index: 1;
+    margin-top: 45px;
+}
+
+.dropdown-content a {
+    font-size: 15px;
+    color: black;
+    padding: 15px 15px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f0ead6;
+  width: 100%;
+  font-size: 20px;
+
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Harald sine right/left greier kommer nuh */
+/* - Venstre "boks"
+- Dimensjonene på bredde og høyde kan man
+justere etter vår tekst og bilde. */
+.left{
+  width: 100%;
+  height: 100%;
+  margin-left: 15px;
+}
+
+
+/* - Høyre "boks", samme gjelder her som med venstre boks. */
+.right{
+  margin-right: 15px;
+  width: 100%;
+  height: 100%;
+}
+
+#boxing {
+  height: 400px;
+  width: auto;
+  margin: 22% 0px 50px 100px;
+  padding: 10px;
+  background-color: white;
+  /* box-shadow: 15px 15px #f0ead6; */
+}
+
+.innhold p {
+  text-align: left;
+}
+
+/* Det er lurt å ha media-queries nederst i css-dokumentet.
+   Man bruker media-queries blant annet for å forandre størresle på
+   taggene avhengig av størrelsen på skjermen */
+
+@media screen and (max-width: 920px){
+  .grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 64px 1fr 1fr;
+    grid-template-areas:
+    "header"
+    "left"
+    "right";
+  }
+}
+
+
+
+/* @media only screen and (max-width: 620px){
+  #index {
+    font-size: 10px;
+  }
+  nav li {
+    font-size: 12px;
+  }
+  .dropdown {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width:760px){
+  #boxing {
+    width: 80%;
+    height: 80%;
+  }
+}
+
+@media only screen and (max-width:900px) {
+  .innhold {
+    max-width: 250px;
+    margin-top: 50px;
+  }
+  #boxing {
+    margin-left: 25px;
+  }
+} */
